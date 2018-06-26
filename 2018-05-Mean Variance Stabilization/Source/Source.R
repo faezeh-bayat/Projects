@@ -279,6 +279,28 @@ classify <- function(MAnorm_result,gene_expression,gene_coordinates)
 {
   Results <- MAnorm_result
   gene_coordinates_21 <-subset(gene_coordinates,gene_coordinates[,2]==21)
+  l=length(gene_coordinates_21[,1])
+  for (i in 1:l) 
+  {
+    print(i)
+    tss=gene_coordinates_21[i,3]
+    if(gene_coordinates_21[i,5]==1)
+    {
+      upstream <- tss-8000
+      downstream <- tss+2000
+      gene_coordinates_21[i,9] <- upstream
+      gene_coordinates_21[i,10] <- downstream
+      gene_coordinates_21[i,11] <- seq(gene_coordinates_21[i,9],gene_coordinates_21[i,10],1)
+    }
+    else
+    {
+      upstream <- tss+8000
+      downstream <- tss-2000
+      gene_coordinates_21[i,9] <- upstream
+      gene_coordinates_21[i,10] <- downstream
+      gene_coordinates_21[i,11] <- seq(gene_coordinates_21[i,9],gene_coordinates_21[i,10],1)
+    }
+  }
   min_M=floor(min(MAnorm_result[,6]))
   max_M=ceil(max(MAnorm_result[,6]))
   num_groups=max_M-min_M
@@ -308,6 +330,67 @@ classify <- function(MAnorm_result,gene_expression,gene_coordinates)
   return(Results)
 }
 #=================================
+gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_coordinates)
+{
+  rep1 <- sample1_rep1_signals
+  rep1_score=matrix(nrow=rep1[length(rep1[,1]),3],ncol=1) #Scores for all genomic positions
+  
+  for(i in 1:length(rep1[,4]))
+  {
+    print(i)
+    rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
+    
+  }
+  gene_coordinates_21 <-subset(gene_coordinates,gene_coordinates[,2]==21)
+  
+  #Sample 1 E116	GM12878 50  
+  #Sample 2 E123	K562 56
+  l=length(gene_coordinates_21[,1])
+  
+  for (i in 1:l) 
+  {
+    print(i)
+    tss=gene_coordinates_21[i,3]
+    if(gene_coordinates_21[i,5]==1)
+    {
+      upstream <- tss-8000
+      downstream <- tss+2000
+      gene_coordinates_21[i,9] <- upstream
+      gene_coordinates_21[i,10] <- downstream
+      peak_interval <- seq(gene_coordinates_21[i,9],gene_coordinates_21[i,10],1)
+    }
+    else
+    {
+      upstream <- tss+8000
+      downstream <- tss-2000
+      gene_coordinates_21[i,9] <- upstream
+      gene_coordinates_21[i,10] <- downstream
+      peak_interval <- seq(gene_coordinates_21[i,10],gene_coordinates_21[i,9],1)
+    }
+    
+    if(min(peak_interval)>length(rep1_score))
+    {
+      gene_coordinates_21[i,11] <- NA
+    }
+    else
+    {
+      gene_coordinates_21[i,11] <- sum(rep1_score[peak_interval,1])#sum of the signals in the window size of 10000(from upstream to downstream)
+    }
+    
+    gene_expression_index <- which(gene_expression[,1]==gene_coordinates_21[i,1])
+    if(length(gene_expression_index)!=0)
+    {
+      gene_coordinates_21[i,12] <- gene_expression[gene_expression_index,50] # amount of the gene expression for the corresponding gene
+    }
+}
+  
+ Results <- gene_coordinates_21
+ return(Results)
+}
+
+#==================================
+
+#===============================
 pval <- function(x, y)
 {
   if (x+y<20) { # x + y is small
@@ -355,4 +438,26 @@ Diff_var_stab <- function(rep1,rep2)
     diff_signals[i,4] <- rep2[i,4]-rep1[i,4]
   }
   diff_signals
+}
+
+
+
+
+#--------------------------------
+target_gene<- function(start,end,gene_coordinates,gene_expression)
+{
+  summit <- ((end-start)/2)+start
+  nearest_genes<-subset(gene_coordinates,(summit>=gene_coordinates[,9] && summit<=gene_coordinates[,10]))
+  if (length(nearest_genes[,1])!=0)
+  {
+    tss <- gene_coordinates_21[,3]
+    nearest_genes[,11]<- abs(tss-(nearest_genes[,3]))
+    min_index <- which.min(nearest_genes[,9])
+    nearest_gene <- nearest_genes[min_index,]
+    nearest_gene<- as.matrix(nearest_gene)
+    gene_expression_index <- which(gene_expression[,1]==nearest_gene[1,1])
+    return (gene_expression_index)
+  }
+  else
+    return (0)
 }
