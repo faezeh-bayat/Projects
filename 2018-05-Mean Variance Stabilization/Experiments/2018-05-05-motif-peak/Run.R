@@ -1,4 +1,4 @@
-setwd("")
+setwd("Projects/2018-05-Mean Variance Stabilization/Experiments/2018-05-05-motif-peak/Run.R")
 rm(list=ls())
 library(pracma)
 source("Projects/2018-05-Mean Variance Stabilization/Source/Source.R")
