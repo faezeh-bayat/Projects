@@ -1,4 +1,4 @@
-setwd("/Users/faezehbayat/Documents/Experiments/2018-06-21-Gene expression analysis/fold enrichment")
+setwd("Projects/2018-05-Mean Variance Stabilization/Experiments/2018-06-21-Gene expression analysis/fold enrichment/Run.R")
 rm(list=ls())
 library(pracma)
 library(readxl)
