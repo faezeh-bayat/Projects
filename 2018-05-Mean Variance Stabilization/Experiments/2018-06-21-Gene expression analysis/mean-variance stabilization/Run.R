@@ -7,7 +7,7 @@ library(data.table)
 library(gdata)
 library(affy)
 library(R.basic)
-source("/Users/faezehbayat/Documents/Experiments/2018-05-22-MAnorm evaluation/Source.R")
+source("Projects/2018-05-Mean Variance Stabilization/Source/Source.R")
 
 
 load("sample1_rep1.Rdata")
