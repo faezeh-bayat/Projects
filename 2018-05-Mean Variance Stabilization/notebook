@@ -1,13 +1,32 @@
 Research project : Prediction of transcription factor binding sites by introducing new signal thresholds
-______
 Proposed method:Using mean-variance stabilization method for introducing new signals for each reads
-_________
 Evaluation methods:
 
 Motif occurence 
 Differentially expression of the genes in different cell types
 Correlation of gene expression data with tag read signals
 ______
+TO DO LIST-2018-06-26
+
+Diff experiment experiment:
+
+-First:
+Swith region strategy: 
+First of all, we are going to identify the regions corresponding to each gene within the 10k window base(8k toward upstream and 2k toward downstream)
+Secondly, we calculate the average M-value of each region corresponding to genes.
+Finally, we are going to group the signals into 4 categories based on their M values.
+
+-Second:
+Make plot
+
+Gene expression analysis:
+
+-Add zoom-in plot(remove top 10 points)
+-Plot best-fit line: lm()
+-Label x and y axes
+-Transform RNA-seq with asinh() function
+-Try other marks: CTCF, NRSF, H3K4me3
+
 2018-06-21-Correlation of gene expression data with transcription factors
 
 For this part of the analysis, we are going to identify the correlation between the gene expression data and signals that we have from different methods. For this purpose, we are going to compute the signals in the window size of 10000 from the TSS,transcriptional start site,(8kb toward upstream and 2kb toward the downstream). Then we calculate the summation of each base's signal in the window. Finally we are going to plot the window's signal versus the gene expression. 
