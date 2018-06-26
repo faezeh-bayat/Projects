@@ -26,7 +26,7 @@ Gene expression analysis:
 -Label x and y axes
 -Transform RNA-seq with asinh() function
 -Try other marks: CTCF, NRSF, H3K4me3
-
+_______
 2018-06-21-Correlation of gene expression data with transcription factors
 
 For this part of the analysis, we are going to identify the correlation between the gene expression data and signals that we have from different methods. For this purpose, we are going to compute the signals in the window size of 10000 from the TSS,transcriptional start site,(8kb toward upstream and 2kb toward the downstream). Then we calculate the summation of each base's signal in the window. Finally we are going to plot the window's signal versus the gene expression. 
