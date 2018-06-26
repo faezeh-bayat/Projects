@@ -1,12 +1,5 @@
 Research project : Prediction of transcription factor binding sites by introducing new signal thresholds
-
-——————————————
-Proposed method:
-Using mean-variance stabilization method for introducing new signals for each reads
-
-
-————————————————————
-
+Proposed method:Using mean-variance stabilization method for introducing new signals for each reads
 Evaluation methods:
 1.Motif occurence 
 2.Correlation of gene expression data with transcription factors
