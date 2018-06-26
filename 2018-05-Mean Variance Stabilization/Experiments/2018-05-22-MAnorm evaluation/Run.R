@@ -1,4 +1,4 @@
-setwd("/Users/faezehbayat/Documents/Experiments/2018-05-22-MAnorm evaluation/fold enrichment")
+setwd("Projects/2018-05-Mean Variance Stabilization/Experiments/2018-05-22-MAnorm evaluation/Run.R")
 rm(list=ls())
 library(pracma)
 library(readxl)
