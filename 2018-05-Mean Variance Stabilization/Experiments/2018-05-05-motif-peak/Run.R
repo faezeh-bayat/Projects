@@ -1,7 +1,7 @@
-setwd("H:/Experiments/2018-05-05-motif-peak/CTCF")
+setwd("")
 rm(list=ls())
 library(pracma)
-source("/Users/faezehbayat/Documents/Experiments/2018-05-22-MAnorm evaluation/MAnorm/Source.R")
+source("Projects/2018-05-Mean Variance Stabilization/Source/Source.R")
 
 rep1<- read.table("rep1.txt") #replicate1 fold enrichment data
 rep2<- read.table("rep2.txt")
