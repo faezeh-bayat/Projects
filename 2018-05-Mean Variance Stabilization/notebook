@@ -25,7 +25,7 @@ Gene expression analysis:
 -Plot best-fit line: lm()
 -Label x and y axes
 -Transform RNA-seq with asinh() function
--Try other marks: CTCF, NRSF, H3K4me3
+-Try other marks: CTCF, NRSF, H3K4me3(https://www.encodeproject.org/experiments/ENCSR000AKA/)
 _______
 2018-06-21-Correlation of gene expression data with transcription factors
 
