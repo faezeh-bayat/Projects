@@ -6,6 +6,11 @@ Motif occurence
 Differentially expression of the genes in different cell types
 Correlation of gene expression data with tag read signals
 ______
+Data sources and softwares needed:
+https://github.com/taoliu/MACS
+https://www.encodeproject.org/experiments/ENCSR000AKA/
+______
+
 TO DO LIST-2018-06-26
 
 Diff experiment experiment:
