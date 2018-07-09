@@ -10,6 +10,31 @@ Data sources and softwares needed:
 https://github.com/taoliu/MACS
 https://www.encodeproject.org/experiments/ENCSR000AKA/
 ______
+TO DO lIST-2018-07-4
+
+-Review papers (big literature review list)
+-Start writing paper
+-Paper:
+--Introduction (Write based on your review of literature)
+--Methods (Start writing now)
+    Data: what data sets, where we got them (URLs etc)
+    Variance stabilization method: Include exact equations and algorithm.
+--Results (Write outline, leaving out the actual results)
+    Motif-based evaluation
+    Gene expression Pearson correlation
+    Differential gene expression
+--Discussion (We will write later)
+
+
+Gene expression analysis:
+
+-Switch to average signal (rather than sum) for readability
+-Calculate Pearson and Spearman correlation of expression vs mean signal
+
+
+Diff experiment experiment(MAnorm):
+-Try H3K4me3 for M value experiment
+-Use ROC-AUC for M value experiment
 
 TO DO LIST-2018-06-26
 
