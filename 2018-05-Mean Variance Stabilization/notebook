@@ -10,6 +10,24 @@ Data sources and softwares needed:
 https://github.com/taoliu/MACS
 https://www.encodeproject.org/experiments/ENCSR000AKA/
 ______
+TO DO LIST-2018-07-23
+
+We are going to find the best fit function to mean-variance data. So I am going to test different options for this function.
+
+Options for function:
+-Step function(just connecting the points in mean-variance to each other)
+-linear function: ax+b (lm)
+-one term polynomial :a0+a1x^2+a2x^2+.....(number of terms??)
+-spline parameters?
+
+Different methods for getting the mean-variance relation:
+-Use weighted average of nearby windows:
+    -bin size:1000,300,100,30
+    -number of neighbor bins: 1,2,4,8,...
+    -weight on neighbor bins: d=distance to bin
+            w=a^d.   a=1,1/2,1/4,3/4
+            
+______
 TO DO lIST-2018-07-4
 
 -Review papers (big literature review list)
