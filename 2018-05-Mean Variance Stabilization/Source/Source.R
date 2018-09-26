@@ -76,7 +76,7 @@ Mean_Variance<-function(rep1,rep2)
   meanvar_scores
 }
 #########################################################
-Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin)
+Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,alpha)
 {
   nn=(2*distance)+1 # number of the neighbors with considering the bin itself(the bin itself+two neighbor bins from each side)
   scores=matrix(nrow=length(rep1_score),ncol=2)
@@ -99,7 +99,7 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin)
       segment_points[1:(nn*bin),1]<-ordered_scores[(((i-distance-1)*bin)+1):((i+distance)*bin),2]
       for (j in 1:nn)
       {
-        segment_points[(((j-1)*bin)+1):(j*bin),2] <- 1/(2^(abs(distance+1-j)))
+        segment_points[(((j-1)*bin)+1):(j*bin),2] <- 1/(alpha^(abs(distance+1-j)))
       }
       mean_var[i,1] <- weighted.mean(segment_points[1:(nn*bin),1],segment_points[1:(nn*bin),2])
       mean_var[i,2] <- w.var(segment_points[1:(nn*bin),1],segment_points[1:(nn*bin),2])
@@ -111,7 +111,7 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin)
       segment_points[1:(nn*bin),1]<-ordered_scores[(((i-1)*bin)+1):((i+distance)*bin),2]
       for (j in 1:nn)
       {
-        segment_points[(((j-1)*bin)+1):(j*bin),2] <- 1/(2^(abs(1-j)))
+        segment_points[(((j-1)*bin)+1):(j*bin),2] <- 1/(alpha^(abs(1-j)))
       }
       mean_var[i,1] <- weighted.mean(segment_points[1:(nn*bin),1],segment_points[1:(nn*bin),2])
       mean_var[i,2] <- w.var(segment_points[1:(nn*bin),1],segment_points[1:(nn*bin),2])
@@ -123,7 +123,7 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin)
       segment_points[1:(nn*bin),1]<-ordered_scores[(((i-distance-1)*bin)+1):((i)*bin),2]
       for (j in 1:nn)
       {
-        segment_points[(((j-1)*bin)+1):(j*bin),2] <- 1/(2^(abs(1-j-distance)))
+        segment_points[(((j-1)*bin)+1):(j*bin),2] <- 1/(alpha^(abs(1-j-distance)))
       }
       mean_var[i,1] <- weighted.mean(segment_points[1:(nn*bin),1],segment_points[1:(nn*bin),2])
       mean_var[i,2] <- w.var(segment_points[1:(nn*bin),1],segment_points[1:(nn*bin),2])
@@ -164,6 +164,28 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin)
 }
 
 #########################################################
+polynomial_function_score <- function(mean_variance,rep1)
+{
+  replicate1_scores <- rep1
+  ds <- data.frame(mean_variance)
+  ds <-subset(ds,ds[,1]!="NA")
+  x <- ds[,1]
+  y <- ds[,2]
+  model <- lm(y ~ poly(x,2))
+  ss <- summary(model)$coefficients
+  a0 <- ss[1,1]
+  a1 <- ss[2,1]
+  #a2 <- ss[3,1]
+  #a3 <- ss[4,1]
+  xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
+  #xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
+  xx <- data.frame(xx)
+  replicate1_scores[,5] <- xx[,1]
+  save(replicate1_scores,file="replicate1_scores.Rdata")
+  replicate1_scores
+}
+################################
+
 step_function_score <- function(mean_variance,rep1)
 {
   data<- mean_variance
@@ -172,7 +194,9 @@ step_function_score <- function(mean_variance,rep1)
   y=data[,2]
   
   ordered_data <- data[order(x,y),]
-  
+  ordered_data <-subset(ordered_data,ordered_data[,1]!="NA")
+  x=ordered_data[,1]
+  y=ordered_data[,2]
   base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
   
   replicate1_scores <- rep1
@@ -220,7 +244,7 @@ linear_function_score <- function(mean_variance,rep1)
   replicate1_scores
 }
 #########################################################
-polynomial_function_score <- function(mean_variance,rep1)
+curve_function_score <- function(mean_variance,rep1)
 {
   replicate1_scores <- rep1
   ds <- data.frame(mean_variance)
@@ -230,7 +254,7 @@ polynomial_function_score <- function(mean_variance,rep1)
   ss <- summary(z)$parameters
   a <- ss[1,1]
   b <- ss[2,1]
-  xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a,b)
+  xx <- apply(rep1[,4,drop=F],1,curve_integralfunction,a,b)
   xx <- data.frame(xx)
   replicate1_scores[,5] <- xx[,1]
   save(replicate1_scores,file="replicate1_scores.Rdata")
@@ -698,13 +722,22 @@ trapzfunction <- function(x,a,b)
 ########################################
 
 ########################################
-polynomial_integralfunction <- function(x,a,b)
+curve_integralfunction <- function(x,a,b)
 {
-  polynomial_function <- function(x) a * x^b
+  curve_function <- function(x) a * x^b
+  s <- integral(curve_function, 0,x)
+  return(s)
+}
+########################################
+polynomial_integralfunction <- function(x,a0,a1)
+{
+  polynomial_function <- function(x) a0 + a1*x
+  #polynomial_function <- function(x) a0 + a1*x + a2 *(x^2)
+  #polynomial_function <- function(x) a0 + a1*x + a2 *(x^2) + a3 *(x^3)
   s <- integral(polynomial_function, 0,x)
   return(s)
 }
-
+##########################################
 linear_integralfunction <- function(x,a,b)
 {
   linear_function <- function(x) a * x +b
@@ -713,3 +746,84 @@ linear_integralfunction <- function(x,a,b)
 }
 
 #####################################
+# poly_integralfunction <- function(x,a0,a1)
+# {
+#   poly_function <- function(x) a0 + a1*x
+#   s <- integral(poly_function, x1,x2)
+#   return(s)
+# }
+# poly_integral<- function(mean_variance,rep1)
+# {
+#   replicate1_scores <- rep1
+#   ds <- data.frame(mean_variance)
+#   ds <-subset(ds,ds[,1]!="NA")
+#   x <- ds[,1]
+#   y <- ds[,2]
+#   model <- lm(y ~ poly(x,2))
+#   ss <- summary(model)$coefficients
+#   a0 <- ss[1,1]
+#   a1 <- ss[2,1]
+#   ordered_scores <- replicate1_scores[order(replicate1_scores[,4]),]
+#   l=length(ordered_scores[,1])
+#   
+#   replicate1_scores[1,5] <- poly_integralfunction(replicate1_scores[1,4],a0,a1)
+#   s <- replicate1_scores[1,5]
+#   for (i in 2:l)
+#   {
+#     
+#     replicate1_scores[i,5] <- s+poly_integralfunction(replicate1_scores[i,4],a0,a1)
+#   }
+#   xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
+#   xx <- data.frame(xx)
+#   replicate1_scores[,5] <- xx[,1]
+#   save(replicate1_scores,file="replicate1_scores.Rdata")
+#   replicate1_scores
+# }
+
+step2_function_score <- function(mean_variance,rep1)
+{
+  data<- mean_variance
+  x=data[,1]
+  y=data[,2]
+  ordered_data <- data[order(x,y),]
+  replicate1_scores <- rep1
+  ordered_scores <- replicate1_scores[order(replicate1_scores[,4]),]
+  #base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
+  replicate1_scores <- ordered_scores
+  
+  # min_mean=min(x)
+  # max_mean=max(x)
+  # min_var=min(y)
+  # max_var=max(y)
+  a <- c(0,ordered_data[1,1])
+  b <- c(0,ordered_data[1,2])
+  replicate1_scores[1,5] <- trapz(a,b)
+  s <- replicate1_scores[1,5]
+  l=length(rep1[,4])
+  for (i in 2:l)
+  {
+    print(i)
+    a <- c(ordered_data[i-1,1],ordered_data[i,1])
+    b <- c(ordered_data[i-1,2],ordered_data[i,2])
+    replicate1_scores[i,5] <- s + trapz(a,b)
+    s <- replicate1_scores[i,5] 
+    
+    # if(rep1[i,4]==0)
+    #   replicate1_scores[i,5]<- 0
+    # 
+    # else if(rep1[i,4]<=max_mean)
+    # {
+    #   sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4])
+    #   replicate1_scores[i,5] <- trapz(sub[,1],sub[,2])
+    # }
+    # else if(rep1[i,4]>max_mean)
+    # {
+    #   replicate1_scores[i,5] <- base_integeal+(max_var*(rep1[i,4]-max_mean))
+    # }
+    
+  }
+  replicate1_scores
+}
+
+
+###############################
