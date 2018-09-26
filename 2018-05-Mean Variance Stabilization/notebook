@@ -10,6 +10,14 @@ Data sources and softwares needed:
 https://github.com/taoliu/MACS
 https://www.encodeproject.org/experiments/ENCSR000AKA/
 ______
+Recent Results
+
+- Recently, I have been dealing with gene expression analysis and here are the few interpretation of the weighted mean-variance.
+--- Alpha has no significant effect in the result. 
+--- As the size of bins increase, the results get better.
+--- As the number of neighbor bins increase, the results get better.
+--- Polynomial regression has better results than Linear regression and Step function has better results than both
+______
 TO DO LIST-2018-07-23
 
 We are going to find the best fit function to mean-variance data. So I am going to test different options for this function.
