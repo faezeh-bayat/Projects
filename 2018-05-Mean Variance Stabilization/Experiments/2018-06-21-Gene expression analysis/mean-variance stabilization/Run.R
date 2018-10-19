@@ -28,3 +28,7 @@ zoom_in_x <- ordered_x[1:(length(temp[,1])),]
 ordered_y <- zoom_in_x[order(zoom_in_x[,12]),]
 total_zoom_in <- ordered_y[1:(length(ordered_y[,1])),]
 cor(total_zoom_in[,11],total_zoom_in[,12],method = c("pearson"))
+
+
+
+############testing more combinations of parameters##########
