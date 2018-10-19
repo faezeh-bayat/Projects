@@ -1,23 +1,24 @@
-Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,alpha)
+Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,alpha,L,ordered_scores)
 {
-  scores=matrix(nrow=length(rep1_score),ncol=2)
-  scores[,1]  <- rep1_score[,1]
-  scores[,2]  <- rep2_score[,1]
-  x=scores[,1]
-  y=scores[,2]
-  
-  ordered_scores <- scores[order(x,y),]
+  # scores=matrix(nrow=length(rep1_score),ncol=2)
+  # scores=matrix(nrow=L,ncol=2)
+  # scores[,1]  <- rep1_score[,1]
+  # scores[,2]  <- rep2_score[,1]
+  # x=scores[,1]
+  # y=scores[,2]
+  # 
+  # ordered_scores <- scores[order(x,y),]
   L=ceiling(length(ordered_scores[,1])/bin) # number of the bins
   l=bin
   Y=matrix(nrow=L,ncol = 1)
   a=matrix(nrow=L,ncol = 1)
-  z=matrix(nrow=((2*distance)+1),1)
+  z=matrix(nrow=((2*distance)+1),ncol = 1)
+  weighted_z=matrix(nrow=((2*distance)+1),ncol=1)
   n=(2*distance)+1
   mean_var=matrix(nrow=L,ncol=2)
   #########################
   for(i in 1:(L-1))
   {
-    print (i)
     Y[i,1]=sum(ordered_scores[(((i-1)*l)+1):(i*l),2]) # sum of points in each bin
     a[i,1]=sum((ordered_scores[(((i-1)*l)+1):(i*l),2])^2) # sum-square of points in each bin
   }
@@ -26,25 +27,27 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,al
   ##########################
   for (j in 1:n)
   {
-    z[j,1] <- l*(1/(alpha^(abs(distance+1-j)*l)))
+    z[j,1] <- (1/(alpha^(abs(distance+1-j)*l)))
+    weighted_z[j,1] <- l*(1/(alpha^(abs(distance+1-j)*l)))
   }
   ##########################
   for(i in 1:L)
   {
-    print(i)
-    output=Weighted_Mean_Var(Y,z,a,i,distance)
+    #print(i)
+    output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
     mean_var[i,1]=output[1]
     mean_var[i,2]=output[2]
   }
   mean_var
 }
 ############################################
-Weighted_Mean_Var<- function(weighted_sum,sum_of_weights,sum_square,center_bin,width)
+Weighted_Mean_Var<- function(weighted_sum,weights,sum_of_weights,sum_square,center_bin,width)
 {
   y=weighted_sum
   W=weighted_sum
   L=length(y)
-  z=sum_of_weights
+  z=weights
+  weighted_z=sum_of_weights
   k=center_bin
   w=width
   a=sum_square
@@ -62,16 +65,14 @@ Weighted_Mean_Var<- function(weighted_sum,sum_of_weights,sum_square,center_bin,w
     y[i,1]=y[i,1]*z[counter,1]
     counter=counter+1
   }
-  weighted_mean=sum(y[lower:upper])/sum(z[lower_z:upper_z])
-  
+  weighted_mean=sum(y[lower:upper])/sum(weighted_z[lower_z:upper_z])
   counter=lower_z
   for(i in lower:upper)
   {
     a[i,1]=a[i,1]*z[counter,1]
     counter=counter+1
   }
-  weighted_var=(sum(a[lower:upper])/sum(z[lower_z:upper_z]))-(weighted_mean^2) #some negative points
-  
+  weighted_var=ceiling((sum(a[lower:upper])/sum(weighted_z[lower_z:upper_z]))-(weighted_mean^2) )#best
   meanvar_values <- c(weighted_mean,weighted_var)
   meanvar_values
 }
@@ -88,8 +89,6 @@ polynomial_function_score <- function(mean_variance,rep1)
   ss <- summary(model)$coefficients
   a0 <- ss[1,1]
   a1 <- ss[2,1]
-  #a2 <- ss[3,1]
-  #a3 <- ss[4,1]
   xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
   #xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
   xx <- data.frame(xx)
@@ -112,31 +111,35 @@ step_function_score <- function(mean_variance,rep1)
   y=ordered_data[,2]
   base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
   
-  replicate1_scores <- rep1
+  
   min_mean=min(x)
   max_mean=max(x)
   min_var=min(y)
   max_var=max(y)
-  
+  ordered_rep1 <- rep1[order(rep1[,4]),]
+  rep1=ordered_rep1
+  replicate1_scores <- rep1
   l=length(rep1[,4])
   for (i in 1:l)
   {
-    print(i)
+    #print(i)
     
     if(rep1[i,4]==0)
       replicate1_scores[i,5]<- 0
     
     else if(rep1[i,4]<=max_mean)
     {
-      sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4])
-      replicate1_scores[i,5] <- trapz(sub[,1],sub[,2])
+      sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4] & ordered_data[,1]>rep1[i-1,4])
+      replicate1_scores[i,5] <- replicate1_scores[i-1,5]+trapz(sub[,1],sub[,2])
     }
     else if(rep1[i,4]>max_mean)
     {
-      replicate1_scores[i,5] <- base_integeal+(max_var*(rep1[i,4]-max_mean))
+      #replicate1_scores[i,5] <- base_integeal+(max_var*(rep1[i,4]-max_mean))
+      replicate1_scores[i,5] <- base_integeal   #0.3976686
     }
     
   }
+  replicate1_scores<- replicate1_scores[order(replicate1_scores[,2]),]
   replicate1_scores
 }
 #########################################################
@@ -224,7 +227,7 @@ rep1_evaluation <- function(motifs,replicate1_scores)
   
   for (i in 1:l)
   {
-    print(i)
+    #print(i)
     chr21_NRSF_motifs[i,7] <-chr21_NRSF_motifs[i,2]+(ceiling((chr21_NRSF_motifs[i,3]-chr21_NRSF_motifs[i,2])/2))
   }
   
@@ -237,7 +240,7 @@ rep1_evaluation <- function(motifs,replicate1_scores)
   counter=0
   for (i in 1:3000)
   {
-    print(i)
+    #print(i)
     rep1_seq=seq(from=ordered_replicate1_scores[i,2],to=ordered_replicate1_scores[i,3])
     for(j in 1:l)
     {
@@ -283,7 +286,7 @@ classify_MAnorm <- function(MAnorm_result)
   
   for (i in 1:l)
   {
-    print(i)
+    #print(i)
     if(Results[i,11]<=a)
     {
       Results[i,14] <- 1 
@@ -399,7 +402,7 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
   
   for(i in 1:length(rep1[,4]))
   {
-    print(i)
+    #print(i)
     rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
     
   }
@@ -411,7 +414,7 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
   
   for (i in 1:l) 
   {
-    print(i)
+    #print(i)
     tss=gene_coordinates_21[i,3]
     if(gene_coordinates_21[i,5]==1)
     {
@@ -482,7 +485,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   
   for(i in 1:length(table_MA[,6]))
   {
-    print(i)
+    #print(i)
     M_values[table_MA[i,2]:table_MA[i,3],1]<-table_MA[i,6]
     
   }
@@ -497,7 +500,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   
   for (i in 1:l) 
   {
-    print(i)
+    #print(i)
     tss=gene_coordinates_21[i,3]
     if(gene_coordinates_21[i,5]==1)
     {
@@ -569,7 +572,7 @@ Diff_var_stab <- function(rep1,rep2)
   diff_signals <- matrix(nrow=l,ncol=4)
   for(i in 1:l)
   {
-    print(i)
+    #print(i)
     diff_signals[i,1] <- rep1[i,1]
     diff_signals[i,2] <- rep1[i,2]
     diff_signals[i,3] <- rep1[i,3]
@@ -657,93 +660,6 @@ linear_integralfunction <- function(x,a,b)
   return(s)
 }
 
-# linear_integralfunction <- function(x,a)
-# {
-#   linear_function <- function(x) a * x
-#   s <- integral(linear_function, 0,x)
-#   return(s)
-# }
-
-#####################################
-# poly_integralfunction <- function(x,a0,a1)
-# {
-#   poly_function <- function(x) a0 + a1*x
-#   s <- integral(poly_function, x1,x2)
-#   return(s)
-# }
-# poly_integral<- function(mean_variance,rep1)
-# {
-#   replicate1_scores <- rep1
-#   ds <- data.frame(mean_variance)
-#   ds <-subset(ds,ds[,1]!="NA")
-#   x <- ds[,1]
-#   y <- ds[,2]
-#   model <- lm(y ~ poly(x,2))
-#   ss <- summary(model)$coefficients
-#   a0 <- ss[1,1]
-#   a1 <- ss[2,1]
-#   ordered_scores <- replicate1_scores[order(replicate1_scores[,4]),]
-#   l=length(ordered_scores[,1])
-#   
-#   replicate1_scores[1,5] <- poly_integralfunction(replicate1_scores[1,4],a0,a1)
-#   s <- replicate1_scores[1,5]
-#   for (i in 2:l)
-#   {
-#     
-#     replicate1_scores[i,5] <- s+poly_integralfunction(replicate1_scores[i,4],a0,a1)
-#   }
-#   xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
-#   xx <- data.frame(xx)
-#   replicate1_scores[,5] <- xx[,1]
-#   save(replicate1_scores,file="replicate1_scores.Rdata")
-#   replicate1_scores
-# }
-
-step2_function_score <- function(mean_variance,rep1)
-{
-  data<- mean_variance
-  x=data[,1]
-  y=data[,2]
-  ordered_data <- data[order(x,y),]
-  replicate1_scores <- rep1
-  ordered_scores <- replicate1_scores[order(replicate1_scores[,4]),]
-  #base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
-  replicate1_scores <- ordered_scores
-  
-  # min_mean=min(x)
-  # max_mean=max(x)
-  # min_var=min(y)
-  # max_var=max(y)
-  a <- c(0,ordered_data[1,1])
-  b <- c(0,ordered_data[1,2])
-  replicate1_scores[1,5] <- trapz(a,b)
-  s <- replicate1_scores[1,5]
-  l=length(rep1[,4])
-  for (i in 2:l)
-  {
-    print(i)
-    a <- c(ordered_data[i-1,1],ordered_data[i,1])
-    b <- c(ordered_data[i-1,2],ordered_data[i,2])
-    replicate1_scores[i,5] <- s + trapz(a,b)
-    s <- replicate1_scores[i,5] 
-    
-    # if(rep1[i,4]==0)
-    #   replicate1_scores[i,5]<- 0
-    # 
-    # else if(rep1[i,4]<=max_mean)
-    # {
-    #   sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4])
-    #   replicate1_scores[i,5] <- trapz(sub[,1],sub[,2])
-    # }
-    # else if(rep1[i,4]>max_mean)
-    # {
-    #   replicate1_scores[i,5] <- base_integeal+(max_var*(rep1[i,4]-max_mean))
-    # }
-    
-  }
-  replicate1_scores
-}
-
 
 ###############################
 step<- function(mean_variance,rep1)
@@ -756,18 +672,18 @@ step<- function(mean_variance,rep1)
   ordered_data <-subset(ordered_data,ordered_data[,1]!="NA")
   x=ordered_data[,1]
   y=ordered_data[,2]
-  #base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
+  base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
   
   replicate1_scores <- rep1
-  #min_mean=min(x)
-  #max_mean=max(x)
-  #min_var=min(y)
-  #max_var=max(y)
+  min_mean=min(x)
+  max_mean=max(x)
+  min_var=min(y)
+  max_var=max(y)
   
   l=length(rep1[,4])
   for (i in 1:l)
   {
-    print(i)
+    #print(i)
     
     if(rep1[i,4]==0)
       replicate1_scores[i,5]<- 0
@@ -780,4 +696,88 @@ step<- function(mean_variance,rep1)
     
   }
   replicate1_scores
+}
+
+#####################################
+score_calculation <- function(mean_variance,rep1,curve)
+{
+  if(curve=="polynomial")
+  {
+    replicate1_scores <- rep1
+    ds <- data.frame(mean_variance)
+    ds <-subset(ds,ds[,1]!="NA")
+    x <- ds[,1]
+    y <- ds[,2]
+    model <- lm(y ~ poly(x,2))
+    ss <- summary(model)$coefficients
+    a0 <- ss[1,1]
+    a1 <- ss[2,1]
+    xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
+    xx <- data.frame(xx)
+    replicate1_scores[,5] <- xx[,1]
+    replicate1_scores
+  }
+  else if(curve=="linear")
+  {
+    replicate1_scores <- rep1
+    ds <- data.frame(mean_variance)
+    x <- ds[,1]
+    y <- ds[,2]
+    #z <- nls(y ~ a * x +b, data = ds, start = list(a=1, b=1))
+    z <- nls(y ~ a*x+b, data = ds, start = list(a=1, b=1))
+    #z <- nls(y ~ a*x, data = ds, start = list(a=1))
+    ss <- summary(z)$parameters
+    a <- ss[1,1]
+    b <- ss[2,1]
+    xx <- apply(rep1[,4,drop=F],1,linear_integralfunction,a,b)
+    #xx <- apply(rep1[,4,drop=F],1,linear_integralfunction,a)
+    xx <- data.frame(xx)
+    replicate1_scores[,5] <- xx[,1]
+    #save(replicate1_scores,file="replicate1_scores.Rdata")
+    replicate1_scores
+  }
+  else if(curve=="step")
+  {
+    data<- mean_variance
+    
+    x=data[,1]
+    y=data[,2]
+    
+    ordered_data <- data[order(x,y),]
+    ordered_data <-subset(ordered_data,ordered_data[,1]!="NA")
+    x=ordered_data[,1]
+    y=ordered_data[,2]
+    base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
+    
+    
+    min_mean=min(x)
+    max_mean=max(x)
+    min_var=min(y)
+    max_var=max(y)
+    ordered_rep1 <- rep1[order(rep1[,4]),]
+    rep1=ordered_rep1
+    replicate1_scores <- rep1
+    l=length(rep1[,4])
+    for (i in 1:l)
+    {
+      #print(i)
+      
+      if(rep1[i,4]==0)
+        replicate1_scores[i,5]<- 0
+      
+      else if(rep1[i,4]<=max_mean)
+      {
+        sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4] & ordered_data[,1]>rep1[i-1,4])
+        replicate1_scores[i,5] <- replicate1_scores[i-1,5]+trapz(sub[,1],sub[,2])
+      }
+      else if(rep1[i,4]>max_mean)
+      {
+        #replicate1_scores[i,5] <- base_integeal+(max_var*(rep1[i,4]-max_mean))
+        replicate1_scores[i,5] <- base_integeal   #0.3976686
+      }
+      
+    }
+    replicate1_scores<- replicate1_scores[order(replicate1_scores[,2]),]
+    replicate1_scores
+  }
 }
