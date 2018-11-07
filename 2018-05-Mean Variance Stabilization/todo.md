@@ -1,20 +1,25 @@
 
 Todo:
 - Model improvements:
+    + [1] What value should we transform? Should we transform the rep1 value, the rep2 value, or mean(rep1,rep2)? For now, let's use mean(rep1,rep2).
     + [4] Think about whether we can come up with a method that treats both replicates as the same.
-    + What value should we transform? Should we transform the rep1 value, the rep2 value, or mean(rep1, rep2)? 
-    + Think about different modes: (1) The user has done just one experiment (no replicates) and needs to use a 
+    + [4] Think about different modes: (1) The user has done just one experiment (no replicates) and needs to use a 
     mean-variance curve from something else or (2) the user has done multiple replicates and wants to use 
     their own mean-variance curve.
-    + What should the model do if there are more than two replicates (3, 4, etc)?
+    + [4] What should the model do if there are more than two replicates (3, 4, etc)?
+    + [4] Try a version where we learn the mean-variance relationship on one data set and use it to transform another data set. 
 
-- Quantitative evaluation (gene expression, enhanacer):
+- Quantitative evaluation:
+    + [1] Unify the code so that you pick a set of parameters and then the code computes both the differential expression and gene expression analyses, and produces all the plots. 
+    + [6] Can we figure out what is the theoretically maximum possible differential expression evaluation value?
 
 - Qualitative evaluation (visualization etc):
-
-- Comparison methods
+    + [2] New plot: This plot is meant to be a visual version of the diff-expr evaluation. Each point is a gene. Horizontal axis = difference in ChIP-seq signal between cell type X and Y. (Don't take the absolute value; there should be both positive and negative values). Vertical axis = difference in gene expression value between X and Y. Two panels: one for fold-enrichment, one for variance-stabilized signal. Again, use the same ChIP-seq track as in your evaluation and pick your favorite cell type pair. 
+    + [2] New plot (similar to the previous one): Each point is a gene. Horizontal axis = ChIP-seq signal in cell type X. Vertical axis = ChIP-seq signal in cell type Y. Color = difference in ChIP-seq signal between X and Y (orange if X>>Y, teal if Y>>X, black if X~=Y). Two panels: one for fold-enrichment, one for variance-stabilized signal. 
+    + [3] UCSC tracks: The UCSC genome browser is an online tool for visualizing genomics data. Please convert a H3K4me3 ChIP-seq track (from your favorite cell type) into BigBed format and upload it to the UCSC genome browser. Do this for both fold enrichment and variance-stabilized data. Neda is doing this for the SSM model so she can help you; I can also help when we meet. I will help you find a region that illustrates our method well and we will take a screenshot to include in the paper. 
 
 - Presentation (writing the paper, publishing code etc): 
+    + [2-Max] Revise the manuscript. 
 
 Meaning of priority numbers:
 - 1: Key parts of our core contribution. Examples: Implementing the main method, doing the main evaluation against our main competitors. 
