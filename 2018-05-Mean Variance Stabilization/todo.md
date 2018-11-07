@@ -6,6 +6,7 @@ Todo:
     + Think about different modes: (1) The user has done just one experiment (no replicates) and needs to use a 
     mean-variance curve from something else or (2) the user has done multiple replicates and wants to use 
     their own mean-variance curve.
+    + What should the model do if there are more than two replicates (3, 4, etc)?
 
 - Quantitative evaluation (gene expression, enhanacer):
 
