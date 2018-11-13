@@ -9,6 +9,7 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,al
   # 
   # ordered_scores <- scores[order(x,y),]
   L=ceiling(length(ordered_scores[,1])/bin) # number of the bins
+  epsilon=1/L
   l=bin
   Y=matrix(nrow=L,ncol = 1)
   a=matrix(nrow=L,ncol = 1)
@@ -33,10 +34,10 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,al
   ##########################
   for(i in 1:L)
   {
-    #print(i)
+    print(i)
     output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
     mean_var[i,1]=output[1]
-    mean_var[i,2]=output[2]
+    mean_var[i,2]=output[2]+epsilon
   }
   mean_var
 }
@@ -73,113 +74,10 @@ Weighted_Mean_Var<- function(weighted_sum,weights,sum_of_weights,sum_square,cent
     counter=counter+1
   }
   weighted_var=ceiling((sum(a[lower:upper])/sum(weighted_z[lower_z:upper_z]))-(weighted_mean^2) )#best
-  meanvar_values <- c(weighted_mean,weighted_var)
+  #meanvar_values <- c(weighted_mean,weighted_var)
+  meanvar_values <- c(weighted_mean,1/sqrt(weighted_var))
   meanvar_values
 }
-
-#########################################################
-polynomial_function_score <- function(mean_variance,rep1)
-{
-  replicate1_scores <- rep1
-  ds <- data.frame(mean_variance)
-  ds <-subset(ds,ds[,1]!="NA")
-  x <- ds[,1]
-  y <- ds[,2]
-  model <- lm(y ~ poly(x,2))
-  ss <- summary(model)$coefficients
-  a0 <- ss[1,1]
-  a1 <- ss[2,1]
-  xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
-  #xx <- apply(rep1[,4,drop=F],1,polynomial_integralfunction,a0,a1)
-  xx <- data.frame(xx)
-  replicate1_scores[,5] <- xx[,1]
-  save(replicate1_scores,file="replicate1_scores.Rdata")
-  replicate1_scores
-}
-################################
-
-step_function_score <- function(mean_variance,rep1)
-{
-  data<- mean_variance
-  
-  x=data[,1]
-  y=data[,2]
-  
-  ordered_data <- data[order(x,y),]
-  ordered_data <-subset(ordered_data,ordered_data[,1]!="NA")
-  x=ordered_data[,1]
-  y=ordered_data[,2]
-  base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
-  
-  
-  min_mean=min(x)
-  max_mean=max(x)
-  min_var=min(y)
-  max_var=max(y)
-  ordered_rep1 <- rep1[order(rep1[,4]),]
-  rep1=ordered_rep1
-  replicate1_scores <- rep1
-  l=length(rep1[,4])
-  for (i in 1:l)
-  {
-    #print(i)
-    
-    if(rep1[i,4]==0)
-      replicate1_scores[i,5]<- 0
-    
-    else if(rep1[i,4]<=max_mean)
-    {
-      sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4] & ordered_data[,1]>rep1[i-1,4])
-      replicate1_scores[i,5] <- replicate1_scores[i-1,5]+trapz(sub[,1],sub[,2])
-    }
-    else if(rep1[i,4]>max_mean)
-    {
-      #replicate1_scores[i,5] <- base_integeal+(max_var*(rep1[i,4]-max_mean))
-      replicate1_scores[i,5] <- base_integeal   #0.3976686
-    }
-    
-  }
-  replicate1_scores<- replicate1_scores[order(replicate1_scores[,2]),]
-  replicate1_scores
-}
-#########################################################
-linear_function_score <- function(mean_variance,rep1)
-{
-  replicate1_scores <- rep1
-  ds <- data.frame(mean_variance)
-  x <- ds[,1]
-  y <- ds[,2]
-  #z <- nls(y ~ a * x +b, data = ds, start = list(a=1, b=1))
-  z <- nls(y ~ a*x+b, data = ds, start = list(a=1, b=1))
-  #z <- nls(y ~ a*x, data = ds, start = list(a=1))
-  ss <- summary(z)$parameters
-  a <- ss[1,1]
-  b <- ss[2,1]
-  xx <- apply(rep1[,4,drop=F],1,linear_integralfunction,a,b)
-  #xx <- apply(rep1[,4,drop=F],1,linear_integralfunction,a)
-  xx <- data.frame(xx)
-  replicate1_scores[,5] <- xx[,1]
-  #save(replicate1_scores,file="replicate1_scores.Rdata")
-  replicate1_scores
-}
-#########################################################
-curve_function_score <- function(mean_variance,rep1)
-{
-  replicate1_scores <- rep1
-  ds <- data.frame(mean_variance)
-  x <- ds[,1]
-  y <- ds[,2]
-  z <- nls(y ~ a * x^b, data = ds, start = list(a=1, b=1))
-  ss <- summary(z)$parameters
-  a <- ss[1,1]
-  b <- ss[2,1]
-  xx <- apply(rep1[,4,drop=F],1,curve_integralfunction,a,b)
-  xx <- data.frame(xx)
-  replicate1_scores[,5] <- xx[,1]
-  save(replicate1_scores,file="replicate1_scores.Rdata")
-  replicate1_scores
-}
-#########################################################
 #########################################################
 rep1_meanvar_score<-function(mean_variance,rep1)
 {
@@ -227,7 +125,7 @@ rep1_evaluation <- function(motifs,replicate1_scores)
   
   for (i in 1:l)
   {
-    #print(i)
+    print(i)
     chr21_NRSF_motifs[i,7] <-chr21_NRSF_motifs[i,2]+(ceiling((chr21_NRSF_motifs[i,3]-chr21_NRSF_motifs[i,2])/2))
   }
   
@@ -240,7 +138,7 @@ rep1_evaluation <- function(motifs,replicate1_scores)
   counter=0
   for (i in 1:3000)
   {
-    #print(i)
+    print(i)
     rep1_seq=seq(from=ordered_replicate1_scores[i,2],to=ordered_replicate1_scores[i,3])
     for(j in 1:l)
     {
@@ -286,7 +184,7 @@ classify_MAnorm <- function(MAnorm_result)
   
   for (i in 1:l)
   {
-    #print(i)
+    print(i)
     if(Results[i,11]<=a)
     {
       Results[i,14] <- 1 
@@ -394,27 +292,40 @@ classify_MAnorm <- function(MAnorm_result)
   return(data)
 }
 #=================================
-gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_coordinates)
+gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_coordinates,gene_name)
 {
   rep1 <- sample1_rep1_signals
   rep1_score=matrix(nrow=rep1[length(rep1[,1]),3],ncol=1) #Scores for all genomic positions
   gene_names <- as.matrix(gene_expression)
-  
+  #Sample 1 E116	GM12878 50  
+  #Sample 2 E123	K562 56
+  #Sample 3 E122 HUVEC 55
+  #Sample 4 E096 IMR90 39
+  #Sample 5 E003 H1 3
+  if(gene_name=="GM12878")
+    x=50
+  else if(gene_name=="K562")
+    x=56
+  else if(gene_name=="HUVEC")
+    x=55
+  else if(gene_name=="IMR90")
+    x=39
+  else if(gene_name=="H1")
+    x=3
   for(i in 1:length(rep1[,4]))
   {
-    #print(i)
+    print(i)
     rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
     
   }
   gene_coordinates_21 <-subset(gene_coordinates,gene_coordinates[,2]==21)
   
-  #Sample 1 E116	GM12878 50  
-  #Sample 2 E123	K562 56
+  
   l=length(gene_coordinates_21[,1])
   
   for (i in 1:l) 
   {
-    #print(i)
+    print(i)
     tss=gene_coordinates_21[i,3]
     if(gene_coordinates_21[i,5]==1)
     {
@@ -437,6 +348,10 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
     {
       gene_coordinates_21[i,11] <- NA
     }
+    else if(max(peak_interval)>length(rep1_score))
+    {
+      gene_coordinates_21[i,11] <- mean(rep1_score[peak_interval[1]:which(peak_interval==length(rep1_score)),1])
+    }
     else
     {
       gene_coordinates_21[i,11] <- mean(rep1_score[peak_interval,1])#sum of the signals in the window size of 10000(from upstream to downstream)
@@ -445,7 +360,7 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
     gene_expression_index <- which(gene_names[,1]==gene_coordinates_21[i,1])
     if(length(gene_expression_index)!=0)
     {
-      gene_coordinates_21[i,12] <- asinh(gene_expression[gene_expression_index,50]) # amount of the gene expression for the corresponding gene
+      gene_coordinates_21[i,12] <- asinh(gene_expression[gene_expression_index,x]) # amount of the gene expression for the corresponding gene
     }
 }
   
@@ -454,8 +369,41 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
 }
 
 #==================================
-differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_signals,table_MA,gene_expression,gene_coordinates)
+differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_signals,table_MA,gene_expression,gene_coordinates,gene_name1,gene_name2)
 {
+  rep1 <- sample1_rep1_signals
+  rep1_score=matrix(nrow=rep1[length(rep1[,1]),3],ncol=1) #Scores for all genomic positions
+  rep2 <- sample2_rep1_signals
+  rep2_score=matrix(nrow=rep2[length(rep2[,1]),3],ncol=1) #Scores for all genomic positions
+  for(i in 1:length(rep1[,4]))
+  {
+    print(i)
+    rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
+    rep2_score[rep2[i,2]:rep2[i,3],1]<-rep2[i,4]
+  }
+  
+  
+  if(gene_name1=="GM12878")
+    x1=50
+  else if(gene_name1=="K562")
+    x1=56
+  else if(gene_name1=="HUVEC")
+    x1=55
+  else if(gene_name1=="IMR90")
+    x1=39
+  else if(gene_name1=="H1")
+    x1=3
+  
+  if(gene_name2=="GM12878")
+    x2=50
+  else if(gene_name2=="K562")
+    x2=56
+  else if(gene_name2=="HUVEC")
+    x2=55
+  else if(gene_name2=="IMR90")
+    x2=39
+  else if(gene_name2=="H1")
+    x2=3
   #--------Calculating M and A values for peaks-----------
   M<-log2((sample1_rep1_signals[,4]+1)/(sample2_rep1_signals[,4]+1))
   A<-0.5*log2((sample1_rep1_signals[,4]+1)*(sample2_rep1_signals[,4]+1))
@@ -485,7 +433,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   
   for(i in 1:length(table_MA[,6]))
   {
-    #print(i)
+    print(i)
     M_values[table_MA[i,2]:table_MA[i,3],1]<-table_MA[i,6]
     
   }
@@ -500,7 +448,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   
   for (i in 1:l) 
   {
-    #print(i)
+    print(i)
     tss=gene_coordinates_21[i,3]
     if(gene_coordinates_21[i,5]==1)
     {
@@ -523,126 +471,44 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
     {
       gene_coordinates_21[i,11] <- NA
     }
+    else if(max(peak_interval)>length(M_values))
+    {
+      gene_coordinates_21[i,11] <- mean(M_values[peak_interval[1]:which(peak_interval==length(M_values)),1])
+      gene_coordinates_21[i,12] <- mean(rep1_score[peak_interval[1]:which(peak_interval==length(rep1_score)),1])
+      gene_coordinates_21[i,13] <- mean(rep2_score[peak_interval[1]:which(peak_interval==length(rep2_score)),1])
+      gene_coordinates_21[i,14] <- gene_coordinates_21[i,12]-gene_coordinates_21[i,13]
+    }
     else
     {
       gene_coordinates_21[i,11] <- mean(M_values[peak_interval,1])#Average of the signals in the window size of 10000(from upstream to downstream)
+      gene_coordinates_21[i,12] <- mean(rep1_score[peak_interval,1])
+      gene_coordinates_21[i,13] <- mean(rep2_score[peak_interval,1])
+      gene_coordinates_21[i,14] <- gene_coordinates_21[i,12]-gene_coordinates_21[i,13]
     }
     
     gene_expression_index <- which(gene_names[,1]==gene_coordinates_21[i,1])
     if(length(gene_expression_index)!=0)
     {
-      gene_coordinates_21[i,12] <- gene_expression[gene_expression_index,50]
-      gene_coordinates_21[i,13] <- gene_expression[gene_expression_index,56]
+      gene_coordinates_21[i,15] <- asinh(gene_expression[gene_expression_index,x1])
+      gene_coordinates_21[i,16] <- asinh(gene_expression[gene_expression_index,x2])
+      gene_coordinates_21[i,17] <- gene_coordinates_21[i,15]-gene_coordinates_21[i,16]
     }
   }
   
   colnames(gene_coordinates_21)[9] <- c("upstream")
   colnames(gene_coordinates_21)[10] <- c("downstream")
   colnames(gene_coordinates_21)[11] <- c("mean M_values")
-  colnames(gene_coordinates_21)[12] <- c("sample1 gene expression")
-  colnames(gene_coordinates_21)[13] <- c("sample2 gene expression")
-  
+  colnames(gene_coordinates_21)[12] <- c("sample1 signal")
+  colnames(gene_coordinates_21)[13] <- c("sample2 signal")
+  colnames(gene_coordinates_21)[14] <- c("sample1-sample2 signal ")
+  colnames(gene_coordinates_21)[15] <- c("sample1 gene expression")
+  colnames(gene_coordinates_21)[16] <- c("sample2 gene expression")
+  colnames(gene_coordinates_21)[17] <- c("sample1-sample2 gene expression")
   Results <- gene_coordinates_21
   write.table(Results,"Results.xls",sep="\t",quote=FALSE,row.names=FALSE)
   return(Results)
 }
-#===============================
-#===================================
-MAnorm_raw_read <- function(rep1,rep2)
-{
-  
-  save(mean_var,file="mean_var.Rdata")
-}
-MAnorm_var_stab <- function(rep1,rep2)
-{
-  
-}
 
-MAnorm_fold_enrich <- function(rep1,rep2)
-{
-  M<-log2((rep1[,4]+1)/(rep2[,4]+1))
-  A<-0.5*log2((rep1[,4]+1)*(rep2[,4]+1))
-  M <- as.matrix(M)
-  A <- as.matrix(A)
-}
-
-Diff_var_stab <- function(rep1,rep2)
-{
-  l=length(rep1[,1])
-  diff_signals <- matrix(nrow=l,ncol=4)
-  for(i in 1:l)
-  {
-    #print(i)
-    diff_signals[i,1] <- rep1[i,1]
-    diff_signals[i,2] <- rep1[i,2]
-    diff_signals[i,3] <- rep1[i,3]
-    diff_signals[i,4] <- rep2[i,4]-rep1[i,4]
-  }
-  diff_signals
-}
-
-
-
-
-#--------------------------------
-ROC_AUC <- function(MAnorm_result)
-{
-  temp <-subset(MAnorm_result,MAnorm_result[,12]!="NA")
-  l=length(temp[,1])
-  data <- temp
-  colnames(data)[10] <- c("Class")
-  for(i in 1:l)
-  {
-    if(temp[i,12]>temp[i,13])
-      data[i,10] <- "high"
-    else
-      data[i,10] <- "low"
-  }
-  data[,1:9] <- NULL
-  data[,3:4] <- NULL
-  data$Class <- as.factor(data$Class)
-  smp_size <- floor(0.75 * nrow(data))
-  train_ind <- sample(seq_len(nrow(data)), size = smp_size)
-  trainData <- data[train_ind, ]
-  testData <- data[-train_ind, ]
-  trainX <- trainData
-  trainX[,1] <- NULL
-  testX <- testData
-  testX[,1] <- NULL
-  # ctrl <- trainControl(method = "repeatedcv", number = 5,summaryFunction=twoClassSummary,classProbs=TRUE,	allowParallel = TRUE)					
-  # #grid <- expand.grid(interaction.depth=c(1,2), n.trees=c(10,20),	shrinkage=c(0.01,0.1),n.minobsinnode = 20)		
-  # gbm.tune <- train(x=trainX,y=trainData$Class,method = "gbm",metric = "ROC",trControl = ctrl,verbose=FALSE)
-  # gbm.pred <- predict(gbm.tune,testX)
-  # confusionMatrix(gbm.pred,testData$Class)   
-  #gbm.probs <- predict(gbm.tune,testX,type="prob")
-  #head(gbm.probs)
-  #gbm.ROC <- roc(predictor=gbm.probs$high,response=testData$Class,levels=rev(levels(testData$Class)))
-  gbm.ROC <- roc(predictor=data[,1],response=data[,2],levels=rev(levels(testData$Class)))
-  gbm.ROC$auc
-  plot(gbm.ROC,main="GBM ROC")
-  
-  # Plot the propability of poor segmentation
-  #histogram(~gbm.probs$PS|testData$Class,xlab="Probability of Poor Segmentation")
-  return(gbm.ROC$auc)
-}
-#-------------------------------------
-
-
-trapzfunction <- function(x,a,b)
-{
-  mean_var_curve_formula <- function(x) a * x^b
-  s <- trapzfun(mean_var_curve_formula, 0,x)
-  s$value
-}
-########################################
-
-########################################
-curve_integralfunction <- function(x,a,b)
-{
-  curve_function <- function(x) a * x^b
-  s <- integral(curve_function, 0,x)
-  return(s)
-}
 ########################################
 polynomial_integralfunction <- function(x,a0,a1)
 {
@@ -659,45 +525,6 @@ linear_integralfunction <- function(x,a,b)
   s <- integral(linear_function, 0,x)
   return(s)
 }
-
-
-###############################
-step<- function(mean_variance,rep1)
-{
-  data<- mean_variance
-  x=data[,1]
-  y=data[,2]
-  
-  ordered_data <- data[order(x,y),]
-  ordered_data <-subset(ordered_data,ordered_data[,1]!="NA")
-  x=ordered_data[,1]
-  y=ordered_data[,2]
-  base_integeal<-trapz(ordered_data[,1],ordered_data[,2])
-  
-  replicate1_scores <- rep1
-  min_mean=min(x)
-  max_mean=max(x)
-  min_var=min(y)
-  max_var=max(y)
-  
-  l=length(rep1[,4])
-  for (i in 1:l)
-  {
-    #print(i)
-    
-    if(rep1[i,4]==0)
-      replicate1_scores[i,5]<- 0
-    
-    else
-    {
-      sub <- subset(ordered_data, ordered_data[,1]<=rep1[i,4] & ordered_data[,1]>=rep1[i-1,4])
-      replicate1_scores[i,5] <- replicate1_scores[i-1,5]+trapz(sub[,1],sub[,2])
-    }
-    
-  }
-  replicate1_scores
-}
-
 #####################################
 score_calculation <- function(mean_variance,rep1,curve)
 {
@@ -760,7 +587,7 @@ score_calculation <- function(mean_variance,rep1,curve)
     l=length(rep1[,4])
     for (i in 1:l)
     {
-      #print(i)
+      print(i)
       
       if(rep1[i,4]==0)
         replicate1_scores[i,5]<- 0
