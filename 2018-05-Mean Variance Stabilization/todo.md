@@ -13,6 +13,7 @@ Todo:
 - Quantitative evaluation:
     + [1] Unify the code so that you pick a set of parameters and then the code computes both the differential expression and gene expression analyses, and produces all the plots. 
     + [6] Can we figure out what is the theoretically maximum possible differential expression evaluation value?
+    + [2] Measure the quality of fit of a transformation. Transform two replicates, R1 and R2 to produce t(R1) and t(R2). Plot: x = t(R1). y = t(R2) - t(R1). There should not be a trend (sloping up or down) to the points. 
 
 - Qualitative evaluation (visualization etc):
     + [2] New plot: This plot is meant to be a visual version of the diff-expr evaluation. Each point is a gene. Horizontal axis = difference in ChIP-seq signal between cell type X and Y. (Don't take the absolute value; there should be both positive and negative values). Vertical axis = difference in gene expression value between X and Y. Two panels: one for fold-enrichment, one for variance-stabilized signal. Again, use the same ChIP-seq track as in your evaluation and pick your favorite cell type pair. 
