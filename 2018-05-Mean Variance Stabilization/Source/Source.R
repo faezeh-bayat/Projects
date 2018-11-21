@@ -34,7 +34,52 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,al
   ##########################
   for(i in 1:L)
   {
-    print(i)
+    #print(i)
+    output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
+    mean_var[i,1]=output[1]
+    mean_var[i,2]=output[2]+epsilon
+  }
+  mean_var
+}
+
+#############################
+Model2<-function(ordered_scores,distance,bin,alpha,L)
+{
+  # scores=matrix(nrow=length(rep1_score),ncol=2)
+  # scores=matrix(nrow=L,ncol=2)
+  # scores[,1]  <- rep1_score[,1]
+  # scores[,2]  <- rep2_score[,1]
+  # x=scores[,1]
+  # y=scores[,2]
+  # 
+  # ordered_scores <- scores[order(x,y),]
+  L=ceiling(length(ordered_scores[,1])/bin) # number of the bins
+  epsilon=1/L
+  l=bin
+  Y=matrix(nrow=L,ncol = 1)
+  a=matrix(nrow=L,ncol = 1)
+  z=matrix(nrow=((2*distance)+1),ncol = 1)
+  weighted_z=matrix(nrow=((2*distance)+1),ncol=1)
+  n=(2*distance)+1
+  mean_var=matrix(nrow=L,ncol=2)
+  #########################
+  for(i in 1:(L-1))
+  {
+    Y[i,1]=sum(ordered_scores[(((i-1)*l)+1):(i*l),2]) # sum of points in each bin
+    a[i,1]=sum((ordered_scores[(((i-1)*l)+1):(i*l),2])^2) # sum-square of points in each bin
+  }
+  Y[L,1]=sum(ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])
+  a[L,1]=sum((ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])^2)
+  ##########################
+  for (j in 1:n)
+  {
+    z[j,1] <- (1/(alpha^(abs(distance+1-j)*l)))
+    weighted_z[j,1] <- l*(1/(alpha^(abs(distance+1-j)*l)))
+  }
+  ##########################
+  for(i in 1:L)
+  {
+    #print(i)
     output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
     mean_var[i,1]=output[1]
     mean_var[i,2]=output[2]+epsilon
@@ -125,7 +170,7 @@ rep1_evaluation <- function(motifs,replicate1_scores)
   
   for (i in 1:l)
   {
-    print(i)
+    #print(i)
     chr21_NRSF_motifs[i,7] <-chr21_NRSF_motifs[i,2]+(ceiling((chr21_NRSF_motifs[i,3]-chr21_NRSF_motifs[i,2])/2))
   }
   
@@ -138,7 +183,7 @@ rep1_evaluation <- function(motifs,replicate1_scores)
   counter=0
   for (i in 1:3000)
   {
-    print(i)
+    #print(i)
     rep1_seq=seq(from=ordered_replicate1_scores[i,2],to=ordered_replicate1_scores[i,3])
     for(j in 1:l)
     {
@@ -184,7 +229,7 @@ classify_MAnorm <- function(MAnorm_result)
   
   for (i in 1:l)
   {
-    print(i)
+    #print(i)
     if(Results[i,11]<=a)
     {
       Results[i,14] <- 1 
@@ -314,7 +359,7 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
     x=3
   for(i in 1:length(rep1[,4]))
   {
-    print(i)
+    #print(i)
     rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
     
   }
@@ -325,7 +370,7 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
   
   for (i in 1:l) 
   {
-    print(i)
+    #print(i)
     tss=gene_coordinates_21[i,3]
     if(gene_coordinates_21[i,5]==1)
     {
@@ -362,10 +407,10 @@ gene_expression_analysis <- function(sample1_rep1_signals,gene_expression,gene_c
     {
       gene_coordinates_21[i,12] <- asinh(gene_expression[gene_expression_index,x]) # amount of the gene expression for the corresponding gene
     }
-}
+  }
   
- Results <- gene_coordinates_21
- return(Results)
+  Results <- gene_coordinates_21
+  return(Results)
 }
 
 #==================================
@@ -377,7 +422,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   rep2_score=matrix(nrow=rep2[length(rep2[,1]),3],ncol=1) #Scores for all genomic positions
   for(i in 1:length(rep1[,4]))
   {
-    print(i)
+    #print(i)
     rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
     rep2_score[rep2[i,2]:rep2[i,3],1]<-rep2[i,4]
   }
@@ -433,7 +478,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   
   for(i in 1:length(table_MA[,6]))
   {
-    print(i)
+    #print(i)
     M_values[table_MA[i,2]:table_MA[i,3],1]<-table_MA[i,6]
     
   }
@@ -448,7 +493,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   
   for (i in 1:l) 
   {
-    print(i)
+    #print(i)
     tss=gene_coordinates_21[i,3]
     if(gene_coordinates_21[i,5]==1)
     {
@@ -587,7 +632,7 @@ score_calculation <- function(mean_variance,rep1,curve)
     l=length(rep1[,4])
     for (i in 1:l)
     {
-      print(i)
+      #print(i)
       
       if(rep1[i,4]==0)
         replicate1_scores[i,5]<- 0
