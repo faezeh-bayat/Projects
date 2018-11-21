@@ -9,6 +9,7 @@ Todo:
     + [4] What should the model do if there are more than two replicates (3, 4, etc)?
     + [4] Try a version where we learn the mean-variance relationship on one data set and use it to transform another data set. 
     + [3] Parallelize the code on Compute Canada. 
+    + [3] Speedup from the binning improvement #3 described in theory.tex. (Or #4, which is easier)
 
 - Quantitative evaluation:
     + [1] Unify the code so that you pick a set of parameters and then the code computes both the differential expression and gene expression analyses, and produces all the plots. 
