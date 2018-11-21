@@ -10,6 +10,8 @@ Data sources and softwares needed:
 https://github.com/taoliu/MACS
 https://www.encodeproject.org/experiments/ENCSR000AKA/
 ______
+In the latest model, I have considered mean of two replicates for computing the mean and variance and it has better results in comparison with considering just one replicate.
+------
 Recent Results
 
 - Recently, I have been dealing with gene expression analysis and here are the few interpretation of the weighted mean-variance.
