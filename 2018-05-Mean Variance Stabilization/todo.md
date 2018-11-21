@@ -1,7 +1,7 @@
 
 Todo:
 - Model improvements:
-    + [1] What value should we transform? Should we transform the rep1 value, the rep2 value, or mean(rep1,rep2)? For now, let's use mean(rep1,rep2).
+    + [1] Try the 3 different input/output methods listed in the theory.tex document. 
     + [4] Think about whether we can come up with a method that treats both replicates as the same.
     + [4] Think about different modes: (1) The user has done just one experiment (no replicates) and needs to use a 
     mean-variance curve from something else or (2) the user has done multiple replicates and wants to use 
