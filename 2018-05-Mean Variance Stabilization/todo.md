@@ -1,5 +1,7 @@
 
 Todo:
+- [1] Unify the code so that you pick a set of parameters and then the code computes both the differential expression and gene expression analyses, and produces all the plots.
+- [1] Organize the project according to the principles in [this paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)
 - Model improvements:
     + [1] Try the 3 different input/output methods listed in the theory.tex document. 
     + [4] Think about whether we can come up with a method that treats both replicates as the same.
@@ -12,7 +14,7 @@ Todo:
     + [3] Speedup from the binning improvement #3 described in theory.tex. (Or #4, which is easier)
 
 - Quantitative evaluation:
-    + [1] Unify the code so that you pick a set of parameters and then the code computes both the differential expression and gene expression analyses, and produces all the plots. 
+    +  
     + [6] Can we figure out what is the theoretically maximum possible differential expression evaluation value?
     + [2] Measure the quality of fit of a transformation. Transform two replicates, R1 and R2 to produce t(R1) and t(R2). Plot: x = t(R1). y = t(R2) - t(R1). There should not be a trend (sloping up or down) to the points. 
 
