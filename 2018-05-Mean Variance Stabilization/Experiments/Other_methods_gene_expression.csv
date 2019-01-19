@@ -1,0 +1,17 @@
+Dataset,Method,Pearson Correlation
+H3K4me3 GM12878,Fold enrichment,0.4299355
+H3K4me3 H1-hESC,Fold enrichment,0.36
+H3K4me3 HUVEC,Fold enrichment,0.3282
+H3K4me3 K562,Fold enrichment,0.4156
+H3K4me3 GM12878,log(fold enrichment),0.4214987
+H3K4me3 H1-hESC,log(fold enrichment),0.3891
+H3K4me3 HUVEC,log(fold enrichment),0.3579
+H3K4me3 K562,log(fold enrichment),0.4277
+H3K4me3 GM12878,P-value,0.4120136
+H3K4me3 H1-hESC,P-value,0.3856
+H3K4me3 HUVEC,P-value,0.2831
+H3K4me3 K562,P-value,0.3987
+H3K4me3 GM12878,log(p-value),0.4214834
+H3K4me3 H1-hESC,log(p-value),0.3789
+H3K4me3 HUVEC,log(p-value),0.2773
+H3K4me3 K562,log(p-value),0.3997
