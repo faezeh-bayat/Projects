@@ -16,7 +16,7 @@ read.tcsv <- function(file, header=TRUE, sep=",", ...) {
   
 }
 
-data <- read.tcsv("HUVEC gene expression results.csv")
+data <- read.csv("../Differential expression analysis.csv")
 
 library(ggplot2)
 
@@ -30,9 +30,9 @@ step.data <- step.data[step.data$Bin.size == 10000,]
 step.data <- step.data[step.data$Alpha == 1,]
 step.data <- step.data[step.data$Width == 3,]
 
-
 other.data <- data[data$Method != "Variance stabilization",]
 
 best.data <- rbind(other.data, step.data)
 
-ggplot(best.data) + aes(x = as.factor(Method), y = Evaluation.Value) + geom_bar(stat="identity") + theme_bw()
+#ggplot(best.data) + aes(x = as.factor(Bin.size), y = Evaluation.Value) + geom_bar(stat="identity") + theme_bw()
+ggplot(best.data) + aes(x = as.factor(Bin.size), y = Evaluation.Value) + geom_bar(stat="identity") + theme_bw()
