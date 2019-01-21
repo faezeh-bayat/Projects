@@ -1,7 +1,0 @@
-Dataset,Method,Pearson Correlation
-H3K4me3 GM12878-H1hESC,Fold enrichment,0.2342919
-H3K4me3 GM12878-HUVEC,Fold enrichment,0.025966
-H3K4me3 GM12878-K562,Fold enrichment,0.307582
-H3K4me3 H1hESC-HUVEC,Fold enrichment,0.2178269
-H3K4me3 H1hESC-K562,Fold enrichment,0.3133881
-H3K4me3 HUVEC-K562,Fold enrichment,0.1019632
