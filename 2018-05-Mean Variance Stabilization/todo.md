@@ -4,6 +4,8 @@ Todo:
     + [4] Add improvement that involves combining all zero-value bins.
     + [6] Speedup from the binning improvement #3 described in theory.tex. (Or #4, which is easier)
 - Quantitative evaluation:
+    + [1] Measure the performance of SDPM-diff (Model 5). 
+    + [2] Apply the variance stabilization procedure to many more assay types: H3K36me3, H3K9me3, H3K27me3, H3K27ac, DNase-seq, ATAC-seq. Focus further analysis on the assays where existing transformations (log, asinh) perform worst. 
     + [2] Measure the quality of fit of a transformation. Transform two replicates, R1 and R2 to produce t(R1) and t(R2). Plot: x = t(R1). y = t(R2) - t(R1). There should not be a trend (sloping up or down) to the points. 
     + [6] Can we figure out what is the theoretically maximum possible differential expression evaluation value?
     + [3] Add raw reads as an alternative method.
