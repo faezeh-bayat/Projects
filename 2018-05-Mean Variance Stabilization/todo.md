@@ -1,11 +1,14 @@
 
 Todo:
+- [1] Organize results in github.
+- Experiments:
+    + [2] Try learning mean-var relationship on a bunch of different assays: H3K36me3, H3K27ac, H3K4me1, H3K27me3, H3K9me3, DNase-seq, ATAC-seq, FAIRE-seq. Try whatever cell types have data available. Focus further analysis on the assays where existing transformations (log, asinh) perform worst. 
 - Model improvements:
     + [4] Add improvement that involves combining all zero-value bins.
     + [6] Speedup from the binning improvement #3 described in theory.tex. (Or #4, which is easier)
 - Quantitative evaluation:
-    + [1] Measure the performance of SDPM-diff (Model 5). 
-    + [2] Apply the variance stabilization procedure to many more assay types: H3K36me3, H3K9me3, H3K27me3, H3K27ac, DNase-seq, ATAC-seq. Focus further analysis on the assays where existing transformations (log, asinh) perform worst. 
+    + [3] Measure the performance of SDPM-diff (Model 5). 
+    + [2] Train the mean-var relationship on chr21, do likelihood testing on chr22. 
     + [2] Measure the quality of fit of a transformation. Transform two replicates, R1 and R2 to produce t(R1) and t(R2). Plot: x = t(R1). y = t(R2) - t(R1). There should not be a trend (sloping up or down) to the points. 
     + [6] Can we figure out what is the theoretically maximum possible differential expression evaluation value?
     + [3] Add raw reads as an alternative method.
@@ -13,9 +16,7 @@ Todo:
     + [3] New plot (similar to the previous one): Each point is a gene. Horizontal axis = ChIP-seq signal in cell type X. Vertical axis = ChIP-seq signal in cell type Y. Color = difference in gene expression between X and Y (orange if X>>Y, teal if Y>>X, black if X~=Y). Two panels: one for fold-enrichment, one for variance-stabilized signal. 
     + [3-Brian] UCSC tracks: The UCSC genome browser is an online tool for visualizing genomics data. Please convert a H3K4me3 ChIP-seq track (from your favorite cell type) into BigBed format and upload it to the UCSC genome browser. Do this for both fold enrichment and variance-stabilized data. Neda is doing this for the SSM model so she can help you; I can also help when we meet. I will help you find a region that illustrates our method well and we will take a screenshot to include in the paper. 
 
-- Presentation (writing the paper, publishing code etc): 
-    + [2-Max] Revise the manuscript. 
-
+ 
 Finished:
 - [1] Unify the code so that you pick a set of parameters and then the code computes both the differential expression and gene expression analyses, and produces all the plots.
 - [1] Organize the project according to the principles in [this paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)
