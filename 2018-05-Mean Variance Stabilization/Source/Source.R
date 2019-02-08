@@ -1,4 +1,4 @@
-Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,alpha,L,ordered_scores)
+Weighted_Mean_Variance<-function(rep1,rep2,distance,bin,alpha,ordered_scores)
 {
   # scores=matrix(nrow=length(rep1_score),ncol=2)
   # scores=matrix(nrow=L,ncol=2)
@@ -41,52 +41,7 @@ Weighted_Mean_Variance<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,al
   }
   mean_var
 }
-
-#############################
-Model2<-function(ordered_scores,distance,bin,alpha,L)
-{
-  # scores=matrix(nrow=length(rep1_score),ncol=2)
-  # scores=matrix(nrow=L,ncol=2)
-  # scores[,1]  <- rep1_score[,1]
-  # scores[,2]  <- rep2_score[,1]
-  # x=scores[,1]
-  # y=scores[,2]
-  # 
-  # ordered_scores <- scores[order(x,y),]
-  L=ceiling(length(ordered_scores[,1])/bin) # number of the bins
-  epsilon=1/L
-  l=bin
-  Y=matrix(nrow=L,ncol = 1)
-  a=matrix(nrow=L,ncol = 1)
-  z=matrix(nrow=((2*distance)+1),ncol = 1)
-  weighted_z=matrix(nrow=((2*distance)+1),ncol=1)
-  n=(2*distance)+1
-  mean_var=matrix(nrow=L,ncol=2)
-  #########################
-  for(i in 1:(L-1))
-  {
-    Y[i,1]=sum(ordered_scores[(((i-1)*l)+1):(i*l),2]) # sum of points in each bin
-    a[i,1]=sum((ordered_scores[(((i-1)*l)+1):(i*l),2])^2) # sum-square of points in each bin
-  }
-  Y[L,1]=sum(ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])
-  a[L,1]=sum((ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])^2)
-  ##########################
-  for (j in 1:n)
-  {
-    z[j,1] <- (1/(alpha^(abs(distance+1-j)*l)))
-    weighted_z[j,1] <- l*(1/(alpha^(abs(distance+1-j)*l)))
-  }
-  ##########################
-  for(i in 1:L)
-  {
-    #print(i)
-    output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
-    mean_var[i,1]=output[1]
-    mean_var[i,2]=output[2]+epsilon
-  }
-  mean_var
-}
-############################################
+###############################
 Weighted_Mean_Var<- function(weighted_sum,weights,sum_of_weights,sum_square,center_bin,width)
 {
   y=weighted_sum
@@ -123,6 +78,109 @@ Weighted_Mean_Var<- function(weighted_sum,weights,sum_of_weights,sum_square,cent
   meanvar_values <- c(weighted_mean,1/sqrt(weighted_var))
   meanvar_values
 }
+
+##############################
+Model3<-function(rep1,rep2,distance,bin,alpha,ordered_scores)
+{
+  # scores=matrix(nrow=length(rep1_score),ncol=2)
+  # scores=matrix(nrow=L,ncol=2)
+  # scores[,1]  <- rep1_score[,1]
+  # scores[,2]  <- rep2_score[,1]
+  # x=scores[,1]
+  # y=scores[,2]
+  # 
+  # ordered_scores <- scores[order(x,y),]
+  xxx <- subset(ordered_scores,ordered_scores[,1]==0 & ordered_scores[,2]==0)
+  l=length(xxx[,1])
+  ll=length(ordered_scores[,1])
+  ss=matrix(nrow=(ll-l+1),ncol=2)
+  ss[1,1]=ss[1,2]=0
+  aa=length(ss[,1])
+  ss[2:aa,] <- ordered_scores[(l+1):ll,]
+  ordered_scores <- ss
+  L=ceiling(length(ordered_scores[,1])/bin) # number of the bins
+  epsilon=1/L
+  l=bin
+  Y=matrix(nrow=L,ncol = 1)
+  a=matrix(nrow=L,ncol = 1)
+  z=matrix(nrow=((2*distance)+1),ncol = 1)
+  weighted_z=matrix(nrow=((2*distance)+1),ncol=1)
+  n=(2*distance)+1
+  mean_var=matrix(nrow=L,ncol=2)
+  #########################
+  for(i in 1:(L-1))
+  {
+    Y[i,1]=sum(ordered_scores[(((i-1)*l)+1):(i*l),2]) # sum of points in each bin
+    a[i,1]=sum((ordered_scores[(((i-1)*l)+1):(i*l),2])^2) # sum-square of points in each bin
+  }
+  Y[L,1]=sum(ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])
+  a[L,1]=sum((ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])^2)
+  ##########################
+  for (j in 1:n)
+  {
+    z[j,1] <- (1/(alpha^(abs(distance+1-j)*l)))
+    weighted_z[j,1] <- l*(1/(alpha^(abs(distance+1-j)*l)))
+  }
+  ##########################
+  for(i in 1:L)
+  {
+    #print(i)
+    output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
+    mean_var[i,1]=output[1]
+    mean_var[i,2]=output[2]+epsilon
+  }
+  mean_var
+}
+
+
+#############################
+Model1<-function(rep1,rep2,rep1_score,rep2_score,distance,bin,alpha,L,ordered_scores)
+{
+  ordered_scores[,2]=(ordered_scores[,1]+ordered_scores[,2])/2
+  xxx <- subset(ordered_scores,ordered_scores[,1]==0 & ordered_scores[,2]==0)
+  l=length(xxx[,1])
+  ll=length(ordered_scores[,1])
+  ss=matrix(nrow=(ll-l+1),ncol=2)
+  ss[1,1]=ss[1,2]=0
+  aa=length(ss[,1])
+  ss[2:aa,] <- ordered_scores[(l+1):ll,]
+  ordered_scores <- ss
+  L=ceiling(length(ordered_scores[,1])/bin) # number of the bins
+  epsilon=1/L
+  l=bin
+  Y=matrix(nrow=L,ncol = 1)
+  a=matrix(nrow=L,ncol = 1)
+  z=matrix(nrow=((2*distance)+1),ncol = 1)
+  weighted_z=matrix(nrow=((2*distance)+1),ncol=1)
+  n=(2*distance)+1
+  mean_var=matrix(nrow=L,ncol=2)
+  #########################
+  for(i in 1:(L-1))
+  {
+    Y[i,1]=sum(ordered_scores[(((i-1)*l)+1):(i*l),2]) # sum of points in each bin
+    a[i,1]=sum((ordered_scores[(((i-1)*l)+1):(i*l),2])^2) # sum-square of points in each bin
+  }
+  Y[L,1]=sum(ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])
+  a[L,1]=sum((ordered_scores[(((L-1)*l)+1):length(ordered_scores[,1]),2])^2)
+  ##########################
+  for (j in 1:n)
+  {
+    z[j,1] <- (1/(alpha^(abs(distance+1-j)*l)))
+    weighted_z[j,1] <- l*(1/(alpha^(abs(distance+1-j)*l)))
+  }
+  ##########################
+  for(i in 1:L)
+  {
+    #print(i)
+    output=Weighted_Mean_Var(Y,z,weighted_z,a,i,distance)
+    mean_var[i,1]=output[1]
+    mean_var[i,2]=output[2]+epsilon
+  }
+  mean_var
+}
+
+############################################
+
 #########################################################
 rep1_meanvar_score<-function(mean_variance,rep1)
 {
@@ -422,7 +480,7 @@ differential_expression_analysis <- function(sample1_rep1_signals,sample2_rep1_s
   rep2_score=matrix(nrow=rep2[length(rep2[,1]),3],ncol=1) #Scores for all genomic positions
   for(i in 1:length(rep1[,4]))
   {
-    #print(i)
+    print(i)
     rep1_score[rep1[i,2]:rep1[i,3],1]<-rep1[i,4]
     rep2_score[rep2[i,2]:rep2[i,3],1]<-rep2[i,4]
   }
