@@ -1,1 +1,110 @@
 
+Research project : Prediction of transcription factor binding sites by introducing new signal thresholds
+Proposed method:Using mean-variance stabilization method for introducing new signals for each reads
+Evaluation methods:
+
+Motif occurence 
+Differentially expression of the genes in different cell types
+Correlation of gene expression data with tag read signals
+______
+Data sources and softwares needed:
+https://github.com/taoliu/MACS
+https://www.encodeproject.org/experiments/ENCSR000AKA/
+______
+In the latest model, I have considered mean of two replicates for computing the mean and variance and it has better results in comparison with considering just one replicate.
+------
+Recent Results
+
+- Recently, I have been dealing with gene expression analysis and here are the few interpretation of the weighted mean-variance.
+--- Alpha has no significant effect in the result. 
+--- As the size of bins increase, the results get better.
+--- As the number of neighbor bins increase, the results get better.
+--- Polynomial regression has better results than Linear regression and Step function has better results than both
+______
+TO DO LIST-2018-07-23
+
+We are going to find the best fit function to mean-variance data. So I am going to test different options for this function.
+
+Options for function:
+-Step function(just connecting the points in mean-variance to each other)
+-linear function: ax+b (lm)
+-one term polynomial :a0+a1x^2+a2x^2+.....(number of terms??)
+-spline parameters?
+
+Different methods for getting the mean-variance relation:
+-Use weighted average of nearby windows:
+    -bin size:1000,300,100,30
+    -number of neighbor bins: 1,2,4,8,...
+    -weight on neighbor bins: d=distance to bin
+            w=a^d.   a=1,1/2,1/4,3/4
+            
+______
+TO DO lIST-2018-07-4
+
+-Review papers (big literature review list)
+-Start writing paper
+-Paper:
+--Introduction (Write based on your review of literature)
+--Methods (Start writing now)
+    Data: what data sets, where we got them (URLs etc)
+    Variance stabilization method: Include exact equations and algorithm.
+--Results (Write outline, leaving out the actual results)
+    Motif-based evaluation
+    Gene expression Pearson correlation
+    Differential gene expression
+--Discussion (We will write later)
+
+
+Gene expression analysis:
+
+-Switch to average signal (rather than sum) for readability
+-Calculate Pearson and Spearman correlation of expression vs mean signal
+
+
+Diff experiment experiment(MAnorm):
+-Try H3K4me3 for M value experiment
+-Use ROC-AUC for M value experiment
+
+TO DO LIST-2018-06-26
+
+Diff experiment experiment:
+
+-First:
+Swith region strategy: 
+First of all, we are going to identify the regions corresponding to each gene within the 10k window base(8k toward upstream and 2k toward downstream)
+Secondly, we calculate the average M-value of each region corresponding to genes.
+Finally, we are going to group the signals into 4 categories based on their M values.
+
+-Second:
+Make plot
+
+Gene expression analysis:
+
+-Add zoom-in plot(remove top 10 points)
+-Plot best-fit line: lm()
+-Label x and y axes
+-Transform RNA-seq with asinh() function
+-Try other marks: CTCF, NRSF, H3K4me3(https://www.encodeproject.org/experiments/ENCSR000AKA/)
+_______
+2018-06-21-Correlation of gene expression data with transcription factors
+
+For this part of the analysis, we are going to identify the correlation between the gene expression data and signals that we have from different methods. For this purpose, we are going to compute the signals in the window size of 10000 from the TSS,transcriptional start site,(8kb toward upstream and 2kb toward the downstream). Then we calculate the summation of each base's signal in the window. Finally we are going to plot the window's signal versus the gene expression. 
+_______
+2018-05-22-Differentially expression of the genes in different cell types
+
+We used the the MAnorm method for our comparison.
+We have devided our comparison into four groups:
+
+1. MAnorm on raw read
+2. MAnorm on variance-stabilization signal
+3. MAnorm on fold enrichment signal
+4. Difference of variance-stabilization signals
+________
+
+2018-05-05-Motif occurence
+
+We had a comparison of our method with fold enrichment method and spp.
+
+Result:
+Our method showed better results in comparison with the other two methods.
+_______
