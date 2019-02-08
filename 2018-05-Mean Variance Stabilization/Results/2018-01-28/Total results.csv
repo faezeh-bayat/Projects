@@ -1,0 +1,751 @@
+Dataset,Evaluation type,Method,Alpha,Beta,Width,Bin size,Curve,Evaluation Value,Model
+GM12878,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.3938084,Model 1
+GM12878,Gene expression analysis,SDPM,2,1,7,10000,step,0.3938084,Model 1
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.394065953,Model 1
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.394726798,Model 1
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.397913587,Model 1
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.411204133,Model 1
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.426850774,Model 1
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.41734897,Model 1
+GM12878,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.382678081,Model 1
+GM12878,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.382678081,Model 1
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.383284679,Model 1
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.383284679,Model 1
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.383840203,Model 1
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.385566275,Model 1
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.429374321,Model 1
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.436179274,Model 1
+GM12878,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.413113132,Model 1
+GM12878,Gene expression analysis,SDPM,2,1,7,1000,step,0.413143417,Model 1
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.411887143,Model 1
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.409173172,Model 1
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.409351346,Model 1
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.408527045,Model 1
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.417931529,Model 1
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.402397286,Model 1
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.315401268,Model 1
+H1-hESC,Gene expression analysis,SDPM,2,1,7,10000,step,0.315401268,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.319382864,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.318845441,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.322668453,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.331502801,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.364480969,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.387146927,Model 1
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.315131351,Model 1
+H1-hESC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.315131351,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.315601779,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.315601779,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.31593956,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.316081053,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.351329972,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.391042237,Model 1
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.32073393,Model 1
+H1-hESC,Gene expression analysis,SDPM,2,1,7,1000,step,0.320802253,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.354766784,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.371545784,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.371338109,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.377307814,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.381203073,Model 1
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.379449454,Model 1
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.318407829,Model 1
+HUVEC,Gene expression analysis,SDPM,2,1,7,10000,step,0.318407829,Model 1
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.318761737,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.318285745,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.324691402,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.331386763,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.337448778,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.332734039,Model 1
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.342652407,Model 1
+HUVEC,Gene expression analysis,SDPM,2,1,7,1000,step,0.342658435,Model 1
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.343332253,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.344301375,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.344971643,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.348168257,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.343908228,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.321785142,Model 1
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.319690567,Model 1
+HUVEC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.319690567,Model 1
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.319686535,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.319686535,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.3197639,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.320278602,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.332148154,Model 1
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.378248869,Model 1
+K562,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.381954982,Model 1
+K562,Gene expression analysis,SDPM,2,1,7,10000,step,0.381954982,Model 1
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.382119013,Model 1
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.382025424,Model 1
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.393659048,Model 1
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.404810838,Model 1
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.414175498,Model 1
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.402627144,Model 1
+K562,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.385851613,Model 1
+K562,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.385851613,Model 1
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.386754811,Model 1
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.386754811,Model 1
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.387008428,Model 1
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.385541966,Model 1
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.42218057,Model 1
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.421238452,Model 1
+K562,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.393167097,Model 1
+K562,Gene expression analysis,SDPM,2,1,7,1000,step,0.393208112,Model 1
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.394198089,Model 1
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.398566382,Model 1
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.403195648,Model 1
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.406590159,Model 1
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.409675094,Model 1
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.402993625,Model 1
+GM12878,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.386073157,Model 2
+GM12878,Gene expression analysis,SDPM,2,1,7,10000,step,0.386073157,Model 2
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.388340391,Model 2
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.388865816,Model 2
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.393800714,Model 2
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.417461376,Model 2
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.433081601,Model 2
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.406569114,Model 2
+GM12878,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.397612037,Model 2
+GM12878,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.397612037,Model 2
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.397566976,Model 2
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.397566976,Model 2
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.397672007,Model 2
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.398721657,Model 2
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.431662426,Model 2
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.4069703,Model 2
+GM12878,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.41006997,Model 2
+GM12878,Gene expression analysis,SDPM,2,1,7,1000,step,0.410100885,Model 2
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.406939691,Model 2
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.406561261,Model 2
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.406188557,Model 2
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.408318536,Model 2
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.417237818,Model 2
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.395407623,Model 2
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.291098991,Model 2
+H1-hESC,Gene expression analysis,SDPM,2,1,7,10000,step,0.291098991,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.291116792,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.292590948,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.305263238,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.312154005,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.355621999,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.390500869,Model 2
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.305890545,Model 2
+H1-hESC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.305890545,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.305890545,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.305890545,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.305890545,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.306490875,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.364908953,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.389097393,Model 2
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.298410835,Model 2
+H1-hESC,Gene expression analysis,SDPM,2,1,7,1000,step,0.299141422,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.330839832,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.34746632,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.362594816,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.37309944,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.38807657,Model 2
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.38237343,Model 2
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.326731957,Model 2
+HUVEC,Gene expression analysis,SDPM,2,1,7,10000,step,0.326731957,Model 2
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.326632572,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.326949014,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.32931487,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.335420473,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.348466003,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.34740749,Model 2
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.331901187,Model 2
+HUVEC,Gene expression analysis,SDPM,2,1,7,1000,step,0.332113109,Model 2
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.337452088,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.342547091,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.343376089,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.347082786,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.343857444,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.324366397,Model 2
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.34406884,Model 2
+HUVEC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.34406884,Model 2
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.344068612,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.344068612,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.343922768,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.342782046,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.359196716,Model 2
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.381367385,Model 2
+K562,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.387458297,Model 2
+K562,Gene expression analysis,SDPM,2,1,7,10000,step,0.387458297,Model 2
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.3896338,Model 2
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.390157901,Model 2
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.402621715,Model 2
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.407655357,Model 2
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.424500667,Model 2
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.397682984,Model 2
+K562,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.386778132,Model 2
+K562,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.386778132,Model 2
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.393161756,Model 2
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.393161756,Model 2
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.393520446,Model 2
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.393312754,Model 2
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.424063593,Model 2
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.405400867,Model 2
+K562,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.387739778,Model 2
+K562,Gene expression analysis,SDPM,2,1,7,1000,step,0.387832567,Model 2
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.394048202,Model 2
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.399821452,Model 2
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.405682085,Model 2
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.407817611,Model 2
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.414673192,Model 2
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.409141979,Model 2
+GM12878,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.386073157,Model 3
+GM12878,Gene expression analysis,SDPM,2,1,7,10000,step,0.386073157,Model 3
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.388340391,Model 3
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.388865816,Model 3
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.393800714,Model 3
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.417461376,Model 3
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.433081601,Model 3
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.406569114,Model 3
+GM12878,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.397612037,Model 3
+GM12878,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.397612037,Model 3
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.397566976,Model 3
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.397566976,Model 3
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.397672007,Model 3
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.398721657,Model 3
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.431662426,Model 3
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.4069703,Model 3
+GM12878,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.41006997,Model 3
+GM12878,Gene expression analysis,SDPM,2,1,7,1000,step,0.410100885,Model 3
+GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.406939691,Model 3
+GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.406561261,Model 3
+GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.406188557,Model 3
+GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.408318536,Model 3
+GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.417237818,Model 3
+GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.395407623,Model 3
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.291098991,Model 3
+H1-hESC,Gene expression analysis,SDPM,2,1,7,10000,step,0.291098991,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.291116792,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.292590948,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.305263238,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.312154005,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.355621999,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.390500869,Model 3
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.305890545,Model 3
+H1-hESC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.305890545,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.305890545,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.305890545,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.305890545,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.306490875,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.364908953,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.389097393,Model 3
+H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.298410835,Model 3
+H1-hESC,Gene expression analysis,SDPM,2,1,7,1000,step,0.299141422,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.330839832,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.34746632,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.362594816,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.37309944,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.38807657,Model 3
+H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.38237343,Model 3
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.326731957,Model 3
+HUVEC,Gene expression analysis,SDPM,2,1,7,10000,step,0.326731957,Model 3
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.326632572,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.326949014,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.32931487,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.335420473,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.348466003,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.34740749,Model 3
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.331901187,Model 3
+HUVEC,Gene expression analysis,SDPM,2,1,7,1000,step,0.332113109,Model 3
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.337452088,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.342547091,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.343376089,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.347082786,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.343857444,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.324366397,Model 3
+HUVEC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.34406884,Model 3
+HUVEC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.34406884,Model 3
+HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.344068612,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.344068612,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.343922768,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.342782046,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.359196716,Model 3
+HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.381367385,Model 3
+K562,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.387458297,Model 3
+K562,Gene expression analysis,SDPM,2,1,7,10000,step,0.387458297,Model 3
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.3896338,Model 3
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.390157901,Model 3
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.402621715,Model 3
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.407655357,Model 3
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.424500667,Model 3
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.397682984,Model 3
+K562,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.386778132,Model 3
+K562,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.386778132,Model 3
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.393161756,Model 3
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.393161756,Model 3
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.393520446,Model 3
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.393312754,Model 3
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.424063593,Model 3
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.405400867,Model 3
+K562,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.387739778,Model 3
+K562,Gene expression analysis,SDPM,2,1,7,1000,step,0.387832567,Model 3
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.394048202,Model 3
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.399821452,Model 3
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.405682085,Model 3
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.407817611,Model 3
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.414673192,Model 3
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.409141979,Model 3
+K562-GM12878,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.391944055,Model 4
+K562-GM12878,Gene expression analysis,SDPM,2,1,7,10000,step,0.391944055,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.392483367,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.393142739,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.39505941,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.402263273,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.411330031,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.418049709,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.30526255,Model 4
+K562-GM12878,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.30526255,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.307837538,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.307837538,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.312028068,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.314835754,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.411072388,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.434754152,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.414087083,Model 4
+K562-GM12878,Gene expression analysis,SDPM,2,1,7,1000,step,0.414101538,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.411462009,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.411290258,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.411083259,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.41157631,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.411293262,Model 4
+K562-GM12878,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.402932566,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.348909688,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,2,1,7,10000,step,0.348909688,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.349895289,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.351668598,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.356342665,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.366447412,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.384008314,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.381304299,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.33860704,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.33860704,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.338979073,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.338979073,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.339076467,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.338966666,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.377406611,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.392039948,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.369818126,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,2,1,7,1000,step,0.369837272,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.374388554,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.377226992,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.379916724,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.380787162,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.38345231,Model 4
+K562-H1-hESC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.375964123,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.324130311,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,2,1,7,10000,step,0.324130311,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.324612738,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.324357578,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.328286391,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.332356939,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.340272778,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.344476987,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.322690348,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.322690348,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.322950747,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.322950747,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.322920931,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.322371354,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.349041845,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.369642137,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.346213081,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,2,1,7,1000,step,0.346226158,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.346312287,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.347191034,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.346424139,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.346606399,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.343959169,Model 4
+K562-HUVEC,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.330156704,Model 4
+K562,Gene expression analysis,SDPM,1,Inf,0,10000,step,0.404034723,Model 5
+K562,Gene expression analysis,SDPM,2,1,7,10000,step,0.404034723,Model 5
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,10000,step,0.404169734,Model 5
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,10000,step,0.402873988,Model 5
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,10000,step,0.404081877,Model 5
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,10000,step,0.407956373,Model 5
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,10000,step,0.413434919,Model 5
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,10000,step,0.413459357,Model 5
+K562,Gene expression analysis,SDPM,1,Inf,0,1E+05,step,0.400521298,Model 5
+K562,Gene expression analysis,SDPM,2,1,7,1E+05,step,0.400521298,Model 5
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1E+05,step,0.401161585,Model 5
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1E+05,step,0.401161585,Model 5
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1E+05,step,0.401477962,Model 5
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1E+05,step,0.403656067,Model 5
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1E+05,step,0.419443309,Model 5
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.439534821,Model 5
+K562,Gene expression analysis,SDPM,1,Inf,0,1000,step,0.407018036,Model 5
+K562,Gene expression analysis,SDPM,2,1,7,1000,step,0.407032849,Model 5
+K562,Gene expression analysis,SDPM,1.002313162,300,1994,1000,step,0.406315438,Model 5
+K562,Gene expression analysis,SDPM,1.000693387,1000,6644,1000,step,0.409708026,Model 5
+K562,Gene expression analysis,SDPM,1.000231076,3000,19932,1000,step,0.412084766,Model 5
+K562,Gene expression analysis,SDPM,1.000069317,10000,66439,1000,step,0.41302602,Model 5
+K562,Gene expression analysis,SDPM,1.000006931,1E+05,664386,1000,step,0.412812234,Model 5
+K562,Gene expression analysis,SDPM,1.000000693,1E+06,6643857,1000,step,0.409199601,Model 5
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,10000,step,0.234790589,Model 1
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,10000,step,0.234790589,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.23990702,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.239564652,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.241019125,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.325900026,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.416719332,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.40377917,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.151719598,Model 1
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,1E+05,step,0.151719598,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.152657746,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.152657746,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.152878352,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.156046307,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.38039829,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.463395229,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,1000,step,0.314809382,Model 1
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,1000,step,0.314850877,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.38145827,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.412580258,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.411743986,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.421168702,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.442166252,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.392624152,Model 1
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,10000,step,0.19242569,Model 2
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,10000,step,0.19242569,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.196562515,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.199803587,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.252674176,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.31346906,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.366679948,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.327286031,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.205278158,Model 2
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,1E+05,step,0.205278158,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.204930176,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.204930176,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.20522833,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.205889168,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.428247743,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.339758085,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,1000,step,0.295237434,Model 2
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,1000,step,0.295853384,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.329647568,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.356129878,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.378006238,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.395971196,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.395131004,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.330143665,Model 2
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,10000,step,0.19242569,Model 3
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,10000,step,0.19242569,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.196562515,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.199803587,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.252674176,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.31346906,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.366679948,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.327286031,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.205278158,Model 3
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,1E+05,step,0.205278158,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.204930176,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.204930176,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.20522833,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.205889168,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.428247743,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.339758085,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1,Inf,0,1000,step,0.295237434,Model 3
+GM12878-H1hESC,Differential expression,SDPM,2,1,7,1000,step,0.295853384,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.329647568,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.356129878,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.378006238,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.395971196,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.395131004,Model 3
+GM12878-H1hESC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.330143665,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,10000,step,0.124692451,Model 1
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,10000,step,0.124692451,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.125943189,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.128818048,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.152707206,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.191672903,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.250806417,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.320303913,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.009640166,Model 1
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,1E+05,step,0.009644403,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.01372097,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.016094217,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.013932424,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.017126194,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.095995881,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.278017748,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,1000,step,0.246378806,Model 1
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,1000,step,0.246421462,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.245059224,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.243042585,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.242795025,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.242295809,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.258664972,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.292167604,Model 1
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,10000,step,0.009388673,Model 2
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,10000,step,0.009388673,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.011314819,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.012485299,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.038540869,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.088190316,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.213472234,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.310014611,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.010605742,Model 2
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,1E+05,step,0.010712372,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.012911813,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.017924386,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.015483752,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.018590628,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.113806152,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.258789531,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,1000,step,0.223278855,Model 2
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,1000,step,0.223424761,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.219557646,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.216057243,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.217694931,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.216605809,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.272887821,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.309709428,Model 2
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,10000,step,0.009388673,Model 3
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,10000,step,0.009388673,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.011314819,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.012485299,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.038540869,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.088190316,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.213472234,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.310014611,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.010605742,Model 3
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,1E+05,step,0.010712372,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.012911813,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.017924386,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.015483752,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.018590628,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.113806152,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.258789531,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1,Inf,0,1000,step,0.223278855,Model 3
+GM12878-HUVEC,Differential expression,SDPM,2,1,7,1000,step,0.223424761,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.219557646,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.216057243,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.217694931,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.216605809,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.272887821,Model 3
+GM12878-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.309709428,Model 3
+GM12878-K562,Differential expression,SDPM,1,Inf,0,10000,step,0.311744652,Model 1
+GM12878-K562,Differential expression,SDPM,2,1,7,10000,step,0.311744652,Model 1
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.311923525,Model 1
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.310493944,Model 1
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.317253653,Model 1
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.318445293,Model 1
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.314386585,Model 1
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.339499202,Model 1
+GM12878-K562,Differential expression,SDPM,1,Inf,0,1E+05,step,0.182988173,Model 1
+GM12878-K562,Differential expression,SDPM,2,1,7,1E+05,step,0.182988173,Model 1
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.184300566,Model 1
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.184300566,Model 1
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.185492658,Model 1
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.183578787,Model 1
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.273001806,Model 1
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.38549469,Model 1
+GM12878-K562,Differential expression,SDPM,1,Inf,0,1000,step,0.332398111,Model 1
+GM12878-K562,Differential expression,SDPM,2,1,7,1000,step,0.332376675,Model 1
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.33868314,Model 1
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.33773935,Model 1
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.337748881,Model 1
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.331518737,Model 1
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.33068635,Model 1
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.322025401,Model 1
+GM12878-K562,Differential expression,SDPM,1,Inf,0,10000,step,0.269397742,Model 2
+GM12878-K562,Differential expression,SDPM,2,1,7,10000,step,0.269397742,Model 2
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.273881782,Model 2
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.275171025,Model 2
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.284125728,Model 2
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.289466882,Model 2
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.317302944,Model 2
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.335078333,Model 2
+GM12878-K562,Differential expression,SDPM,1,Inf,0,1E+05,step,0.177192645,Model 2
+GM12878-K562,Differential expression,SDPM,2,1,7,1E+05,step,0.177192645,Model 2
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.181925923,Model 2
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.181925923,Model 2
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.181977799,Model 2
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.182591396,Model 2
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.290408539,Model 2
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.360460288,Model 2
+GM12878-K562,Differential expression,SDPM,1,Inf,0,1000,step,0.32658154,Model 2
+GM12878-K562,Differential expression,SDPM,2,1,7,1000,step,0.326629002,Model 2
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.336915165,Model 2
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.333318873,Model 2
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.334167531,Model 2
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.323575784,Model 2
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.328923185,Model 2
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.317498084,Model 2
+GM12878-K562,Differential expression,SDPM,1,Inf,0,10000,step,0.269397742,Model 3
+GM12878-K562,Differential expression,SDPM,2,1,7,10000,step,0.269397742,Model 3
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.273881782,Model 3
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.275171025,Model 3
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.284125728,Model 3
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.289466882,Model 3
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.317302944,Model 3
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.335078333,Model 3
+GM12878-K562,Differential expression,SDPM,1,Inf,0,1E+05,step,0.177192645,Model 3
+GM12878-K562,Differential expression,SDPM,2,1,7,1E+05,step,0.177192645,Model 3
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.181925923,Model 3
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.181925923,Model 3
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.181977799,Model 3
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.182591396,Model 3
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.290408539,Model 3
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.360460288,Model 3
+GM12878-K562,Differential expression,SDPM,1,Inf,0,1000,step,0.32658154,Model 3
+GM12878-K562,Differential expression,SDPM,2,1,7,1000,step,0.326629002,Model 3
+GM12878-K562,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.336915165,Model 3
+GM12878-K562,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.333318873,Model 3
+GM12878-K562,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.334167531,Model 3
+GM12878-K562,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.323575784,Model 3
+GM12878-K562,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.328923185,Model 3
+GM12878-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.317498084,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,10000,step,0.196437364,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,10000,step,0.196437364,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.201601083,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.201039728,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.211373986,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.230373945,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.24490596,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.223336784,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.173281177,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,1E+05,step,0.173280792,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.166146587,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.164102016,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.160169835,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.155754524,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.167391527,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.199150163,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,1000,step,0.182261391,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,1000,step,0.182290535,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.197942779,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.195018894,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.17521845,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.175761716,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.161792291,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.193857411,Model 1
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,10000,step,0.150522057,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,10000,step,0.150522057,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.149512654,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.14951539,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.151693449,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.152677808,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.143848108,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.148242008,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.137760692,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,1E+05,step,0.137843448,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.133989657,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.134722713,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.130082651,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.130846292,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.144033416,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.153391549,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,1000,step,0.112132938,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,1000,step,0.112455547,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.142852811,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.173280667,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.193580293,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.195876497,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.206778256,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.15410535,Model 2
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,10000,step,0.150522057,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,10000,step,0.150522057,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,10000,step,0.149512654,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,10000,step,0.14951539,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,10000,step,0.151693449,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,10000,step,0.152677808,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,10000,step,0.143848108,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,10000,step,0.148242008,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,1E+05,step,0.137760692,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,1E+05,step,0.137843448,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1E+05,step,0.133989657,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1E+05,step,0.134722713,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1E+05,step,0.130082651,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1E+05,step,0.130846292,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1E+05,step,0.144033416,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.153391549,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1,Inf,0,1000,step,0.112132938,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,2,1,7,1000,step,0.112455547,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.002313162,300,1994,1000,step,0.142852811,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000693387,1000,6644,1000,step,0.173280667,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000231076,3000,19932,1000,step,0.193580293,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000069317,10000,66439,1000,step,0.195876497,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000006931,1E+05,664386,1000,step,0.206778256,Model 3
+H1hESC-HUVEC,Differential expression,SDPM,1.000000693,1E+06,6643857,1000,step,0.15410535,Model 3
+GM12878-H1hESC,Differential expression,Fold enrichment,NA,NA,NA,NA,NA,0.2342919,NA
+GM12878-HUVEC,Differential expression,Fold enrichment,NA,NA,NA,NA,NA,0.025966,NA
+GM12878-K562,Differential expression,Fold enrichment,NA,NA,NA,NA,NA,0.307582,NA
+H1hESC-HUVEC,Differential expression,Fold enrichment,NA,NA,NA,NA,NA,0.2178269,NA
+H1hESC-K562,Differential expression,Fold enrichment,NA,NA,NA,NA,NA,0.3133881,NA
+HUVEC-K562,Differential expression,Fold enrichment,NA,NA,NA,NA,NA,0.1019632,NA
+GM12878-H1hESC,Differential expression,P-value,NA,NA,NA,NA,NA,0.23321323,NA
+GM12878-HUVEC,Differential expression,P-value,NA,NA,NA,NA,NA,0.10458929,NA
+GM12878-K562,Differential expression,P-value,NA,NA,NA,NA,NA,0.22773789,NA
+H1hESC-HUVEC,Differential expression,P-value,NA,NA,NA,NA,NA,0.04422615,NA
+H1hESC-K562,Differential expression,P-value,NA,NA,NA,NA,NA,0.21548375,NA
+HUVEC-K562,Differential expression,P-value,NA,NA,NA,NA,NA,0.18589404,NA
+GM12878-H1hESC,Differential expression,log(P-value+1),NA,NA,NA,NA,NA,0.37411039,NA
+GM12878-HUVEC,Differential expression,log(P-value+1),NA,NA,NA,NA,NA,0.15174956,NA
+GM12878-K562,Differential expression,log(P-value+1),NA,NA,NA,NA,NA,0.36470415,NA
+H1hESC-HUVEC,Differential expression,log(P-value+1),NA,NA,NA,NA,NA,0.09913208,NA
+H1hESC-K562,Differential expression,log(P-value+1),NA,NA,NA,NA,NA,0.40105179,NA
+HUVEC-K562,Differential expression,log(P-value+1),NA,NA,NA,NA,NA,0.15940041,NA
+GM12878-H1hESC,Differential expression,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.42322522,NA
+GM12878-HUVEC,Differential expression,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.29224555,NA
+GM12878-K562,Differential expression,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.35028134,NA
+H1hESC-HUVEC,Differential expression,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.24616156,NA
+H1hESC-K562,Differential expression,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.39568784,NA
+HUVEC-K562,Differential expression,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.20129896,NA
+GM12878-H1hESC,Differential expression,asinh(P-value),NA,NA,NA,NA,NA,0.384541462,NA
+GM12878-HUVEC,Differential expression,asinh(P-value),NA,NA,NA,NA,NA,0.155315798,NA
+GM12878-K562,Differential expression,asinh(P-value),NA,NA,NA,NA,NA,0.361323763,NA
+H1hESC-HUVEC,Differential expression,asinh(P-value),NA,NA,NA,NA,NA,0.102392222,NA
+H1hESC-K562,Differential expression,asinh(P-value),NA,NA,NA,NA,NA,0.39105179,NA
+HUVEC-K562,Differential expression,asinh(P-value),NA,NA,NA,NA,NA,0.154848299,NA
+GM12878-H1hESC,Differential expression,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.42399611,NA
+GM12878-HUVEC,Differential expression,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.29836514,NA
+GM12878-K562,Differential expression,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.34717999,NA
+H1hESC-HUVEC,Differential expression,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.24121694,NA
+H1hESC-K562,Differential expression,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.38568784,NA
+HUVEC-K562,Differential expression,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.19498794,NA
+GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.418486734,NA
+H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.387877091,NA
+HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.355506494,NA
+K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.424731398,NA
+GM12878,Gene expression analysis,asinh(P-value),NA,NA,NA,NA,NA,0.421388401,NA
+H1-hESC,Gene expression analysis,asinh(P-value),NA,NA,NA,NA,NA,0.37597686,NA
+HUVEC,Gene expression analysis,asinh(P-value),NA,NA,NA,NA,NA,0.278520119,NA
+K562,Gene expression analysis,asinh(P-value),NA,NA,NA,NA,NA,0.400769065,NA
+GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.4299355,NA
+H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.36,NA
+HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.3282,NA
+K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.4156,NA
+GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.4214987,NA
+H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.3891,NA
+HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.3579,NA
+K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.4277,NA
+GM12878,Gene expression analysis,P-value,NA,NA,NA,NA,NA,0.4120136,NA
+H1-hESC,Gene expression analysis,P-value,NA,NA,NA,NA,NA,0.3856,NA
+HUVEC,Gene expression analysis,P-value,NA,NA,NA,NA,NA,0.2831,NA
+K562,Gene expression analysis,P-value,NA,NA,NA,NA,NA,0.3987,NA
+GM12878,Gene expression analysis,log(P-value+1),NA,NA,NA,NA,NA,0.4214834,NA
+H1-hESC,Gene expression analysis,log(P-value+1),NA,NA,NA,NA,NA,0.3789,NA
+HUVEC,Gene expression analysis,log(P-value+1),NA,NA,NA,NA,NA,0.2773,NA
+K562,Gene expression analysis,log(P-value+1),NA,NA,NA,NA,NA,0.3997,NA
+H1hESC-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.3623497,Model 1
+HUVEC-K562,Differential expression,SDPM,1.000000693,1E+06,6643857,1E+05,step,0.2809935,Model 1
+GM12878,SDPM,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.087245357,NA
+GM12878,log(x+1),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.227020925,NA
+GM12878,asinh(x),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.472619545,NA
+GM12878,No transformation,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.13702002,NA
+H1-hESC,SDPM,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.289351271,NA
+H1-hESC,log(x+1),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.273174973,NA
+H1-hESC,asinh(x),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.482485308,NA
+H1-hESC,No transformation,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-4.739151165,NA
+HUVEC,SDPM,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.470704591,NA
+HUVEC,log(x+1),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.399436457,NA
+HUVEC,asinh(x),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.563435066,NA
+HUVEC,No transformation,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-3.833048724,NA
+K562,SDPM,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.340960405,NA
+K562,log(x+1),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.357485802,NA
+K562,asinh(x),Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.54211332,NA
+K562,No transformation,Log likelihood,1.000000693,1E+06,6643857,1E+05,step,-1.523608695,NA
