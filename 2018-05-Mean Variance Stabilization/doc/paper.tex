@@ -1,0 +1,616 @@
+\documentclass[11pt]{article}
+
+%\usepackage{tabularx,booktabs}
+\usepackage{url}
+%\usepackage{fullpage}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in,marginparwidth=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{subfig}
+%\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{algorithm,algpseudocode}
+\newcommand{\junk}[1]{}
+
+\usepackage{todonotes}
+
+\begin{document}
+%\thispagestyle{empty}
+
+\title{Variance-stabilized units for sequencing-based genomic signals}
+\author
+{
+\centering
+Faezeh Bayat \and Maxwell Libbrecht\footnote{Corresponding Author. Email: maxwl@sfu.ca} \\
+Department of Computing Science, Simon Fraser University, Burnaby BC, Canada\\
+}
+
+\date{}
+
+\maketitle
+\begin{abstract}
+Sequencing-based genomic signals such as ChIP-seq are widely used to measure many types of genomic biochemical activity, such transcription factor binding, chromatin accessibility and histone modification. The processing pipeline for these assays usually outputs a real-valued signal for every position in the genome that measures the strength of activity at that position. This signal is used in downstream applications such as visualization and chromatin state annotation. There are several representations of signal strength at a given that are currently used, including the raw read count, the fold enrichment over control, and log p-value of enrichment relative to control. 
+However, these representations lack the property of variance stabilization.  That is, a difference between 100 and 200 reads usually has a very different statistical importance from a difference between 1,100 and 1,200 reads. 
+Here we propose SDPM, variance-stabilized units for sequencing-based genomic signals.  
+We demonstrate that these variance stabilized units have several desirable properties. 
+First, the difference between a pair of cell types of ChIP-seq signal at a gene's promoter is highly correlated with the difference in that gene's expression.
+Second, the ChIP-seq signal at a gene's promoter has a linear relationship with that gene's expression when the ChIP-seq is represented with variance-stabilized units; this correlation is stronger with variance-stabilized units than existing alternatives. 
+SDPM units will eliminate the need for downstream methods to implement complex mean-variance relationship models, and will enable genomic signals to be easily understood by eye. 
+% Identifying the genome functions is one of the main challenges in the field of biology. However it has been more than a decade that the sequencing of the human genome has clarified a significant portion of genome functions but much is still unknown.\\
+% One of the most effective ways for understanding the mechanism of the transcriptional regulation is through identifying the transcription factor binding sites. Chromatin Immunoprecipitation followed by sequencing (ChIP-seq) is the technique to capture the protein binding locations in the DNA. Various experimental and computational approaches have used ChIP-seq datasets to detect the transcription factor and histone modification binding sites. Among these approaches, some of them aim to score each of the sequence reads from the ChIP-seq data and select the highest scores as the transcription binding sites and some of the pther approaches aime to identify the diffenetially expressed genes corresponding to each of the transcription factors and histone modifications.
+% Generally, it is difficult to answer the question that whether a given drug, tissue, or disease produces a statistically significant change in activity relative to a particular cellular condition and this is because the output of a genomics assay---the number of reads mapping to a given genomic position---has no natural units.
+% Here in this paper, we utilized a method called variance stabilization for getting the mean-varince relation between differnt replicates of a sample so that we can introduce new signals for the sequence reads of the genomic assays that have natural units in which the reads' density are statistically significant.
+\end{abstract}
+
+%\listoftodos
+
+%==============================================
+\section{Introduction}
+% A primary function of the genome is the production of RNA transcripts of
+% genes, which produces the proteins that carry out most cellular activity~\cite{muto2002transcription}. Gene regulation
+% occurs through a number of biochemical processes. In the cell, most DNA is wrapped around 
+% histone proteins, forming a DNA-protein complex called chromatin. DNA-binding proteins (transcription
+% factors) act on chromatin, changing its biochemical activity by recruiting other factors,
+% covalently altering histone proteins, moving and removing histones to reveal the underlying DNA,
+% and ultimately expressing or silencing a given gene. This complicated process is a key determinant
+% of human traits, evolution and disease \cite{chi2010covalent}. In order to capture the gene regulation, experimental methods know as genomic assays have emerged.
+% These experimental assays leverage DNA sequencing technology to assay various
+% types of biochemical properties.
+
+Sequencing-based assays can measure many types of genomic biochemical activity, including transcription factor binding, histone modifications and chromatin accessibility. 
+These assays work by selecting DNA fragments from a sample that exhibit the desired type of activity, sequencing the fragments to produce sequencing reads and mapping each read to the genome.
+Each of these assays produces a genomic signal---that is, a signal that has a value for each base pair in the genome.
+Examples include ChIP-seq measurements of transcription factor binding or histone modification and measurements of chromatin accessibility from DNase-seq, FAIRE-seq or ATAC-seq. 
+
+
+% Some of the known genomic assays which have accelerated the process of identifying gene regulation are transcription factor chromatin immunoprecipitation sequencing (TF ChIP-seq) which aims to identify the binding sites of a given transcription factor and histone ChIP-seq as another kind of sequencing which aims to identify gene regulation~\cite{liu2010q,pillai2015chip}.
+
+% In a ChIP-seq experiment, the researcher applies a series
+% of biochemical reactions to break up the genome into small fragments of DNA, then applies an
+% antibody to extract the fragments that are bound to a certain transcription factor (the term “immunoprecipitation” derives
+% from this antibody step). The researcher then uses DNA sequencing technology to read the DNA
+% sequence of each fragment. This sequence is known as a “read”. If that sequence occurs exactly
+% once in the human reference genome, the read is taken as evidence that the transcription factor
+% binds to the matching position\cite{overballe2012next}.
+
+The usefulness of genomic signals requires they be expressed in units that are suitable for analysis.
+The natural unit of sequencing-based assays is the read count: the number of reads that mapped to a given position in the genome (after extending and shifting; see Methods). 
+However, read count is a poor measure of the strength of a given signal, for reasons discussed below.
+For RNA-seq, which measures gene (or transcript) signals, several units have been proposed that perform better than read count, including RPKM, FPKM and TPM \cite{wagner2012measurement,conesa2016survey}.
+However, less work has been done to develop good units for genomic signals. 
+
+In particular, we are interested in developing units for genomic signals with the desirable property of \emph{variance stability}.
+That is, if we performed many replicates of the same assay, the variance of the signal should be constant from position to position. 
+Existing units are variance in-stable; for example, a locus with 1,100 reads might get 1,200 reads in a subsequent experiment by chance, whereas a locus that went from 100 to 200 reads likely reflects a non-random change in activity.
+
+Currently, the primary approach for analyzing genomic signals is to develop a complex statistical model that accounts for the behavior of read counts. 
+In particular, most state-of-the-art genomic signal analysis methods for tasks such as peak calling use the negative binomial distribution because this distribution allows the model to account for a non-uniform relationship between the mean of the signal and its variance \cite{zhang2008model}. 
+However, there are two limitations to this approach. 
+First, a substantial investment must be made in each new application of genomic signals to implement and optimize such a statistical model.
+Second, without well-behaved units, visualization is difficult.
+
+Because of the difficulty in developing and optimizing complex models, many existing methods use simple Gaussian models of genomic signals.
+Two prominent examples include imputation and semi-automated genome annotation (SAGA).
+Existing methods for imputation use mean squared error (MSE) as an evaluation metric, which is equivalent to log likelihood under a fixed-variance Gaussian model \cite{ernst2015large,schreiber2018multi}. 
+The most widely-used existing methods for SAGA either use a Gaussian distribution \cite{chan2017segway} or binarize the data to avoid having to find good units \cite{ernst2012chromhmm}, although some work has been done to use a negative binomial distribution for SAGA as well \cite{mammana2015chromatin}. 
+% SAGA methods have been shown to achieve better performance by using a negative binomial distribution that takes into account the mean-variance relationship.
+
+Other than raw read counts, two units are currently used for genomic signals: fold enrichment and Poisson p-value \cite{hoffman2012integrative,kundaje2015integrative}. 
+Fold enrichment measures a genomic signal as the ratio of reads of the experiment to a control (such as ChIP Input).
+Poisson p-value measures a signal as the log p-value of a Poisson distribution test with a null hypothesis derived from a control distribution. 
+Because these units are variance in-stable, existing methods attempt to stabilize the variance of these units by applying a transformation such as log or inverse hyperbolic sine (arcsinh). 
+However, these transformations do not fully stabilize the variance (Results). 
+
+In this manuscript, we propose variance-stabilized units for sequencing-based genomic signals called SDPM (``standard deviations per million mapped reads'').
+Unlike alternative units, SDPM are variance-stabilized: any pair of loci with SDPM scores of $x$ and $x+1$ have the same difference in activity regardless of $x$. 
+We do this by comparing multiple replicates of the same assay to derive a mean-variance relationship, then using this relationship to derive a variance-stabilizing transformation.
+
+
+
+% In this paper, we used multiple replicates for our analysis. The goal of this paper is to introduce new signals for each of the tag reads in the ChIP-seq data sets so that they all have natural units and are significant enough that transcription factors are easily identified and distinguished by eye.
+
+% In order to understand genome activity, it is important to be able to ask whether or not a given drug, tissue or disease produces a statistically significant change in activity relative to a particular cellular condition. This question is difficult to answer because the output of a genomics assay---the number of reads mapping to a given genomic position---has no natural units. In particular, a difference between 0 and 30 reads may have a very different statistical importance from a difference between 1,000 and 1,030 reads. This property is due to a relationship between the mean of the data-generating process (i.e. the genomics assay) and its variance.
+
+% Currently-used models that do not model this mean-variance relationship, such as a Poisson model, result in poor evaluation of statistical differences. We plan to develop a method to learn the mean-variance relationship of functional genomics data sets using the variation among biological replicates.
+
+\section{Methods}
+% Learning the mean-variance relationship of genomic assay data sets has the benefit that it makes it possible to place genomics data in interpretable units. The lack of natural units for genomics data sets makes it difficult to analyze these data sets by eye and confounds any downstream analysis that does not internally model the mean-variance relationship (such as genome annotation). Currently, as a preprocessing step, many analyses of genomics data sets transform the data using a log or inverse hyperbolic sine transform to attempt to normalize for the mean-variance relationship of the sequencing read counts. However, there is no theoretical basis for using these particular transformations rather than any other, so they almost certainly do not properly account for the mean-variance relationship as intended.
+
+% In the following, the general strategy for introducing the new signals in the ChIP-seq data are described.
+
+\subsection{ChIP-seq data}
+We acquired ChIP-seq data from the ENCODE consortium for the histone modification H3K4me3 on four cell lines: GM12878, H1-hESC, HUVEC and K562 which have ENCODE accession numbers ENCSR000DRY, ENCSR019SQX, ENCSR000AKN and ENCSR000AKU, respectively.
+These ChIP-seq data sets were processed with a uniform pipeline \cite{encode2012integrated}.
+Briefly, the ChIP-seq reads were mapped to the hg19 reference genome and reads were shifted and extended according to the estimated fragment length to produce a read count for each genomic position.
+As controls, ChIP-seq Input experiments were performed by the same labs.
+Two signals were produced: fold enrichment and log p-value.
+Fold enrichment signal is defined as the ratio of observed data over control \cite{hoffman2012integrative}.
+P-value signal is defined as the log p-value of a Poisson model with a null distribution derived from the control \cite{kundaje2015integrative}. 
+
+\subsection{RNA-seq data}
+For use in evaluation, we acquired RNA-seq data sets for each of the cell types above from the Roadmap Epigenomics consortium \cite{kundaje2015integrative}. 
+These RNA-seq data sets were processed with a uniform pipeline that produces a TPM value for each gene \cite{kundaje2015integrative}. 
+To stabilize the variance of these signals, we used an asinh transformation. 
+
+\subsection{Identifying the mean-variance relationship}
+
+Our variance-stabilizing transformation depends on knowing the mean-variance relationship for input data. 
+We learn this by comparing multiple replicates of the same experiment.
+Specifically, we assume that we have two replicates, which we term the \emph{base}  and \emph{auxiliary} replicates respectively. 
+Let the observed signal at position $i$ be $x^{(1)}_i$ and $x^{(2)}_i$ for the base and auxiliary replicates respectively. 
+Our model imagines that every position $i$ has an unknown distribution of sequencing reads for the given assay $P_i(x)$, which has mean $\mu_i = \text{mean}(P_i(x))$. 
+We further suppose that there is a relationship  $\sigma(\mu)$ between the mean and variance of these distributions. That is, $\text{var}(P_i(x)) = \sigma(\mu_i)^2$. 
+We are interested in learning $\sigma(\mu)$. 
+Observe that $x_i$ is an unbiased estimate of $\mu_i$, and that $(x_i^{(1)}-x^{(2)}_i)^2$ is an unbiased estimate of $\sigma(\mu_i)^2$. 
+We use this observation to estimate the function $\sigma(\mu)$ as follows. 
+
+We first sort the $N$ genomic positions $i \in \{1\dots N\}$ by the value of $x^{(1)}_i$ and define bins with $b$ genomic positions each. 
+Let $I_j \subseteq \{1\dots N\}$ be the set of positions in bin $j$. 
+For each bin $j$, we compute $\mu_j = 1/b \sum_{i \in I_j} x^{(1)}_i$ and $\sigma_j^2 = 1/b \sum_{i \in I_j} (x^{(2)}_i - \mu_j)^2$.  
+To increase the robustness of these estimates, we smooth across bins by defining 
+\begin{equation}
+\bar \sigma_j^2 = \frac {\sum_{i=j-w}^{j+w} 2^{-b |j-w|/\beta} \sigma_i^2} {\sum_{i=j-w}^{j+w} 2^{-b |j-w|/\beta}} .
+\end{equation}
+That is, we take the weighted average of $2w+1$ bins centered on $j$, where bin $j+k$ has weight $2^{- b k/\beta}$. $\beta$ is a bandwidth parameter---a high value of $\beta$ means that weight is spread over many bins, whereas a low value means that weight in concentrated on a small number of bins.  
+We define $w$ such that it ignores bins with weight less than 0.01; specifically, $w = -\beta  \log(0.01) / b \log(2)$
+
+The choice of $b$ and $\beta$ forms a bias-variance trade-off. 
+Larger values of $b$ and $\beta$ lead to more observations contributing to each estimate $\sigma_j(\mu)$ and therefore result in a lower variance. 
+In contrast, small values of $b$ and $\beta$ lead to a very homogeneous set of positions $I_j$ and therefore less averaging across dissimilar positions. 
+We compared multiple values of $b$ and $\beta$ to optimize this choice (Results).
+
+
+% As it was mentioned before, we have used two replicates in order to produce the natural unit for getting the signal profiles for each of the tags in the replicates.
+% Each of the tags in the replicates show specific position in the genome with their corresponding signal which describes the tag's significance to be the precise position of the transcription factors.
+% Many computational and experimental methods have proposed different approaches for getting these signals and here in this paper, we have used the variance-stabilization method in order to get these signals.
+% In order to get the mean-variance relation between two replicates, we considered the basepairs along the chromosomes as points and divided the points in two replicates into different groups which we call them $bins$. The read densities in each of the replicates are shown in the  In Figure~\ref{fig:rep1rep2}. The simplest model for getting the mean-variance relation, one should compute the mean and variance of the points in each bin but we used the weighted mean-variance relation in our method.
+% Four this purpose, we calculated the weighted mean and weighted variance for each of the bins.
+% So we introduced a new term called $width$ and this term defines the number of the neighbor bins from each side of the bin that we want to consider in the weighted mean and weighted variance. 
+% The following equations show the weighted mean and weighted variance corresponding to each bin:
+% \begin{equation}
+% \text{Weighted-mean}(X,w)=\frac{\sum_{i=1}^{i=N}{w_{i}X_{i}}}{\sum_{i=1}^{i=N}\text{bin size}\times{w_{i}}}
+% \end{equation}
+% and
+% \begin{equation}
+% \text{Weighted-variance}(X,w)=\frac{\sum_{i=1}^{i=N}{w_{i}(X_{i}-\mu})^2}{\sum_{i=1}^{i=N}\text{bin size}\times{w_{i}}}
+% \end{equation}
+% where
+% $X=(X_{i},X_{i+1},...,X_{N})=((x_{i1},x_{i2},....,x_{i \text{bin size}}),....,((x_{N1},x_{N2},....,x_{N bin_size}))$, $N$ is the number of the total bins that are considered in the weighted mean and variance which we can show by $2width+1$ and $w$ shows the corresponding weight to each of the bins. and $\mu$ is $Weighted-mean(X,w)$.
+% We defined $w_{i}$ as:
+% \begin{equation}
+% w_{i}=\frac{1}{\alpha^{|width+1-i|}}
+% \end{equation}
+% where in this equation, $\alpha=2^{(\frac{1}{\beta})}$ and we call $\beta$, the bandwidth. 
+% Therefore, by using the $width$ and $bandwidth$ parameters, we can compute the weighted mean and weighted variance for each of the bins. ~\ref{fig:meanvar} shows the mean-variance relation of the two replicates shown in the ~\ref{fig:rep1rep2}
+
+
+\subsubsection{Calculating variance-stabilized signals}
+Having learned the mean-variance relationship, we compute SDPM using the variance-stabilizing transformation \cite{durbin2002variance}
+\begin{equation}
+  t(x) = C \int_{0}^{x}\frac 1 {\bar \sigma(u)} du ,
+\end{equation}
+where $\sigma(x)$ is the standard deviation of a variable with a mean of $x$ which in our method, $x$ is the weighted mean, and $C$ can be any constant. 
+This transformation is guaranteed to be variance-stabilizing; that is, $\text{var}(t(x_i))$ is constant for all genomic positions $i$.
+
+
+% FIXME choosing $C$ based on number of reads.
+
+% which in this equation, $x$ shows the tags raw signal from each of the replicates.
+% The resulting signal is in units of standard deviation, so it has the useful property that all data points have a 95\% confidence intervals of $\sim$2 units. Therefore, variance-stabilized data sets are a natural by-product of a principled method for evaluating statistical differences. These data sets are much more easily analyzed by eye, and are necessary for any downstream analysis that does not internally model the mean-variance relationship.
+
+% \begin{algorithm}[H]
+% 	\caption{Mean-Variance stabilization approach \todo[inline]{MtF: Replace English text with math.}}
+% 	\begin{algorithmic}[1]\baselineskip=14pt\relax
+% 		\State  \textbf{Input:} Two replicates from fold enrichment analysis, Number of points in each bin $(n)$, Number of the neighbors from each side $(width)$, bandwidth parameter $(\beta)$.
+% 		\State  \textbf{Output:} New variance-stabilized signals for each of the tag reads in the ChIP-seq data.
+% 		\State Sort the signals in replicate 1
+% 		\For{$i=1, 2,..., (length((replicate 1)/n))$}
+% 		%\State Select $i th$ bin from replicate 1 and their corresponding point in the genome position.
+% 		\State Use the $replicate 2$ to calculate weighted mean and weighted variance for $i th$ bin regarding to the width and bandwidth parameters.
+% 		\EndFor
+% 		\For{$i=1,2,...,(length(replicate 1))$}
+% 		\State Calculate new signal for each of the replicate 1's tags from fold enrichment analysis by 
+% 		$f(x) = \int_{0}^{x}\frac 1 {\sigma(u)} du$ where $x$ is replicate 1's read in the fold enrichment analysis
+% 		\EndFor
+% 		\For{$i=1,2,...,(length(replicate 2))$}
+% 		\State Calculate new signal for each of the replicate 2's tags from fold enrichment analysis by 
+% 		$f(x) = \int_{0}^{x}\frac 1 {\sigma(u)} du$ where $x$ is replicate 12s read in the fold enrichment analysis
+% 		\EndFor
+% 		\State Return the ChIP-seq data with new signals
+% 	\end{algorithmic}
+% 	\label{alg:mean-var}
+% \end{algorithm}
+
+% \subsection{Combining data across replicates and cell types}
+
+% We consider two cases; where we have two or more replicates of a given experiment and where we do not.
+% We call units derived in the former case SDPM-same to indicate that all data comes from the same sample. 
+% In the same-sample case, we set each pair of replicates as base and auxiliary in turn and aggregate the results.
+% That is, if we have $R$ replicates and $N$ genomic positions, the number of data points in the sum in equation REF is $R(R-1) N$.
+% In the latter case where the target sample has only one replicate, we must learn the mean-variance relationship from other experiments where the assay was performed on different samples.
+% We call units derived in this case SDPM-diff.
+% To do so, we aggregate results over each pair of replicates in each sample where replicates are available.
+% That is, if there are $S$ samples and sample $s$ has $R_s$ replicates, the total number  of data points is $N \sum_{s} R_s (R_s-1)$.
+
+
+% In this paper, we studied five different models for identifying the best model for achieving the mean-variance curve. In each of these models, replicates fall into two categories which we call them \textit{base} and \textit{auxiliary} replicates. We used the base replicates for capturing the order of the genomic positions based on their score which are gained from one of \textit{fold-enrichment} or \textit{p-value} approaches. On the other hand, auxiliary replicates were used for calculating the mean and variance of chunk of points. 
+
+% \subsubsection{Model 1}
+% In the first model, we used all replicate pairs as base/auxiliary. For this purpose, we picked a specific celltype of an assay and used all replicate pairs like R1/R2, R2/R1, R1/R3, R3/R1, R2/R3, R3/R2, $\dots$as base/auxiliary. Then we applied the learned transformation to all replicates (R1, R2, R3, ...).
+% \subsubsection{Model 2}
+% In this model, one of the replicates of a specific celltype like R1 is considered as the base replicate and the other replicate like R2 is considered as the auxiliary. Then, the mean-variance curve is applied to each of the replicates separately.
+% \subsubsection{Model 3}
+% This model is another transformation of the previous model in which we considered one of the replicates as the base replicate and instead of considering just the second replicate as the auxiliary replicate, we considered the mean of the replicates as the auxiliary.
+% \subsubsection{Model 4}
+% In this model, the mean-variance curve is identified from one celltype of an specific assay and the learned transformation is applied to the other celltypes of the same assay. For obtaining the mean-variance curve on the first celltype, we used model 1 approach????.
+% \subsubsection{Model 5}
+% In this model, we identified the mean-variance curve from the all celltypes of an specific assay except for one celltype and the learned curve is then applied on the celltype which was not considered in the process of identifying the mean-variance curve. Again for distinguishing the transformation curve, we utilized model 1.
+
+
+\subsection{Alternative methods}
+
+We consider two alternative units for genomic signals that are typically used in existing analyses: fold enrichment \cite{hoffman2012integrative} and Poisson p-value \cite{kundaje2015integrative}. 
+Fold enrichment signal is defined as $x'_i / c_i$, where $x'_i$ is the raw read count at genomic position $i$ and $c_i$ is the read count of a control experiment (e.g. ChIP-seq input sample). 
+Poisson p-value signal is the log p-value of Poisson distribution test of whether the observed signal is greater than the control. 
+% Specifically, FIXME. 
+To attempt to stabilize the variance, existing methods usually apply either a log or arcsinh transformation.
+These transformations are used because they are variance-stabilizing for certain mean-variance relationships \cite{bartlett1947use}. 
+
+Specifically, $\log(x)$ is variance-stabilizing when $\sigma(\mu)^2 = s \mu^2$ for some constant $s$, and $\text{arcsinh}(x)$ is variance-stabilizing when $\sigma(\mu)^2 = s \mu^2 + \lambda$ \cite{box1953non}. 
+In the experiments below, we compare to both existing units under both existing transformations.
+
+\subsection{Differential expression evaluation}
+
+We developed two measures to evaluate the quality of units for genomic signals.  
+The first is based on the objective that, when two samples are compared, a large difference in  signal at a gene's promoter should indicate a large difference in that gene's expression.
+Specifically, for each gene $k$, let $x_k^{S}$ and $g_k^S$ be the signal and gene expression respectively. 
+We define $dx_k = x_k^{S_1} - x_k^{S_2}$ and $dg_k = g_k^{S_1} - g_k^{S_2}$. 
+We define the differential expression score as the correlation between $dx$ and $dg$.
+We use Spearman correlation in order to remove the dependence of the score on the scale of the units.
+We use the histone modification H3K4me3 as the genomic signal for this evaluation because it is indicative of gene expression.  
+Signals with poor units will likely have a poor differential expression score because high-variance signals (usually high-magnitude signals) will overwhelm the correlation
+
+
+\subsection{Linearity evaluation}
+Our second evaluation measure is based on the objective that genomic signals with good units  should have a linear relationship with other types of data.
+Specifically, we define the linearity score as the Pearson correlation between $g_k$ and $x_k$.
+We use the Pearson correlation because it specifically identifies the linear relationships between the two data sets. 
+
+% In order to analyze gene regulation and genomic biochemical activities, it is crucial to consider sequence-based analysis of the proteins binding sites in DNA. Different computational approaches have been proposed for capturing the significancy of these binding sites. Some methods consider maximizing the statistical significancy of these sites based on the sequence patterns. Enrichment of the sequences related to a particular position is the main key in these approaches. Other methods consider maximizing the likelihood of the precise binding sites of the proteins???. Fold-enrichment method and p-value metric are two of the most well-known approaches which considers the statistically significant binding sites as precise locations. 
+%The other well-known approach which selects approximately accurate binding sites based on their statistically significance is by using the P-value metric.  
+
+
+
+
+%===============================
+\section{Results}
+% In order to evaluate the efficiency of the proposed method, we considered two broad areas in which histone modification and transcription factors may affect which is described in the following sections.
+% Due to the huge amount of ChIP-seq data for all chromosomes, we did our experiments on chromosome 21.  
+
+\subsection{Existing units are not variance-stabilized}
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[th!]
+%\captionsetup{justification=centering,margin=2cm}
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{./figures/loglikelihood.pdf}
+		\caption{}
+		\label{fig:firstlog}
+		\hfill
+	\end{subfigure}
+	 %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.6\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/bandwidthpearson.png}
+		\includegraphics[width=\textwidth,]{./figures/meanloglikelihood.pdf}
+		\caption{}
+		\label{fig:bandpearson}
+	\end{subfigure}
+	
+	\caption{Comparison of the SDPM method log likelihood with three other signal transformation methods; Fold enrichment, asinh(Fold enrichment) and log(x+1). 
+	Lower values for negative log likelihood are preferable. a)Log likelihood comparison. b)Average log likelihood comparison
+	}
+	\label{fig:log}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+To evaluate whether existing units for genomic signals have stable variance, we computed the mean-variance relationship for a number of existing data sets (Methods).
+As we expected, we found that the variance has a strong dependence on the mean; genomic positions with low signals experience little variance across replicates, whereas positions with high signals experience much larger variance (Figure \ref{fig:m}). 
+Moreover, the relationship does not match that expected by the currently-used $\log(x+1)$ and $\text{asinh}(x)$ transformations: these transformations are variance-stabilizing when the mean-variance relationship is linear or linear plus constant respectively (Methods).
+In contrast, the observed mean-variance relationship does not precisely match either of these functions, indicating that neither of these transformations is fully variance-stabilizing. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{We derived a variance-stabilizing transformation for genomic signals}
+
+\begin{figure}[th!]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{./figures/expressionnewBinbandpearson.png}
+		\caption{}
+		\label{fig:binpearson}
+		\hfill
+	\end{subfigure}~
+	 %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.5\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/bandwidthpearson.png}
+		\includegraphics[width=\textwidth,]{./figures/diffnewBinbandpearson.png}
+		\caption{}
+		\label{fig:bandpearson}
+	\end{subfigure}\\
+	 %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.45\textwidth}
+		%\includegraphics[width=1.4\textwidth,height=0.3\textheight]{./figures/newBinbandpearson.png}
+		\includegraphics[width=\textwidth]{./figures/newnewmeansigma2.png}
+		\caption{}
+		\label{fig:m}
+	\end{subfigure}~
+% 	\caption{Relation between different parameters and linearity score.}
+% 	\label{fig:parameters}
+% \end{figure}	
+%%%%%%%%%%%%%%%
+%-===============================
+% \begin{figure}[H]
+	%\centering
+\begin{subfigure}[b]{0.45\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/rep1rep2.png}
+		\includegraphics[width=\textwidth]{./figures/xfx.png}
+		\caption{}
+		\label{fig:meanvar}
+	\end{subfigure}\\
+% 	\begin{subfigure}[b]{0.5\textwidth}
+% 		%\includegraphics[width=\textwidth]{./figures/bandwidthpearson.png}
+% 		%\includegraphics[width=\textwidth,]{./figures/meanvar.png}
+% 		\includegraphics[width=\textwidth,]{./figures/newnewmeansigma.png}
+% 		\caption{??}
+% 		\label{fig:meansigma}
+% 	\end{subfigure}
+
+	~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\caption{Deriving the mean-variance relation. a) Relation between bin size and bandwidth and Pearson correlation in gene expression analysis. b) Relation between bin size and bandwidth and Pearson correlation in differential expression analysis. c) Learned Mean-variance relationship derived from two replicates.  d) Learned transformation function.
+% 	\todo[inline]{FtM: Make the horizontal axis the same between the (c) and (d).-->I think they shouldn't be same. because one of them is mean of the points and one of them is just the raw signal}
+% 	\todo[inline]{MtF: For all figure captions: Move all the text into the main caption so that there is just e.g. ``(a)'' under the figure. The figure captions should describe each attribute of the figure: ``The horizontal axis indicates .... The color indicates ...''}
+% 	\todo[inline]{MtF: I think you were right about the figure showing bandwidth and bin size---please move it to Methods.}
+    \todo[inline]{In (c), multiply each transformation by a constant so that the lines line up better. }
+	}
+	\label{fig:meanvarvar}
+\end{figure}
+
+Motivated by the observation that existing transformations are not variance-stabilizing, we used the learned mean-variance curve to derive a variance-stabilizing transformation (Methods).
+As expected, we found that this transformation successfully stabilized the variance of the signal. 
+To measure the fit, we evaluated the log likelihood under a max-entropy model.
+% \todo[inline]{MtF: The right thing to do is to use different data to evaluate the likelihoood (for example, use chr22 for likelihood and chr21 for training the curve. Did you do this? If not, we should put it on the todo list for the future and remove this bit of text.}
+% \todo[inline]{FtM:No we have just trained and testes on chr21}
+Specifically, the max-entropy model given a specific mean and variance is a Gaussian distribution, so we evaluated the likelihood under a Gaussian model.
+As expected, we found that the learned mean-variance curve had a poor likelihood (average log density of $-2.8$), reflecting non-uniform variance (Figure \ref{fig:log}). 
+We found that either linear or linear plus constant models---implied by the $\log(x+1)$ and $\text{asinh(x)}$ transformations respectively---greatly improved the likelihood (average log density of -1.31 and -1.51 respectively).
+Our learned mean-variance relationship had the best likelihood (average log density -1.29), indicating that the learned curve successfully models the mean-variance relationship of the data. 
+
+Moreover, we found that the mean-variance relationship differs greatly from experiment to experiment (Figure \ref{fig:firstlog}).
+Some experiments (on GM12878 and K562) have near-uniform variance without transformation, whereas others (H1-hESC and HUVEC) have a near-linear mean-variance relationship.
+The mean-variance relationship learned by SDPM correctly captures these differences, as indicated by its good likelihood on all data sets. 
+These differences indicates that it is necessary to learn a separate mean-variance relationship for each data set, rather than applying a single transformation (such as log or asinh) to every data set.
+
+
+
+
+% \subsection{SDPM units are amenable to visualization}
+
+\subsection{Variance-stabilized units identify differences between cell types}
+
+We found that when genomic signals are represented in SDPM, differences in the signal between two cell types is predictive of a functional change between the cell types. 
+To evaluate the quality of this predictiveness, for a given pair of cell types, we propose the differential expression score, which measures the
+% \todo{MtF: Pearson or Spearman?}\todo{we have used Pearson}
+correlation of the difference in H3K4me3 signal at a gene's promoter with the difference in that gene's expression (Methods).
+A high correlation indicates that 
+We expect that units without stable variance will have low correlation because differences in signal will be overwhelmed by high-variance positions.
+We found that SDPM had a higher average differential expression score (0.33) than the other methods we tried (0.17-0.32).
+
+% In addition to gene expression analysis which shows the significance of the proposed signal in one cell type, it is essential to compare the proposed signals for each transcription factor between different cell types to make sure that the signals are not just significant in one cell type.
+% For this purpose, we have used a model named MAnorm for quantitative comparison of these ChIP-seq data sets~\cite{shao2012manorm}.
+% The main idea of the MAnorm is to normalize data in a way that is different from the other traditional microarray data normalization and that is due to the different signal-to-noise (S/N) ratio across different samples in ChIP-seq data. Hence, MAnorm has introduced a novel normalization method for ChIP-seq data. In the following, the MAnorm method is described briefly.\\
+% As the input of the problem, there are four bed files which show the peak coordinates and sequence reads in each of the two samples.
+% MAnorm consideres the reads of the same length in the peaks. So it calculates the number of reads in a fixed window size centered at the summit of each point. It has proposed a window size of 1000 bp for transcription factor binding sites. The (M,A) value for each one of the peaks can now be defined as:
+% \begin{equation}
+% M = log_{2}(\frac{R_{1}}{R_{2}})
+% \end{equation}
+% and
+% \begin{equation}
+% A = log_{2}\frac{({R_{1}}\times{R_{2}})}{2}
+% \end{equation}
+% which in these equations, $R_{1}$ and $R_{2}$ are read density at each peak region in sample 1 and sample 2 respectively. In the mentioned equations, $M$ represents the $log_{2}$ fold change of the read density in the peak region of the two samples and $A$ represents the average read density  in the $log_{2}$ transformation format.
+% In the next step, MAnorm applies a robust regreesion to the $M-A$ data and derives a linear model to fit to these data such as the following model:
+% \begin{equation}
+% M = a+ b\times A
+% \end{equation}
+% To normalize the $(M,A)$ values, there will be a coordinate transformation to map the $A$ axis to the linear model fitted to the data. The new $(M,A)$ values are considered as normalized values for each peak. At last, a $P-value$ is assigned to each peak to identify the significance of the differential binding at each location.\\  
+% We used the MAnorm methodology in our experiment in order to know the significance of the new proposed signals between different celltypes. But since we are not dealing with a peak finding problem and we just want to identify the best signal assigning method in ChIP-seq data, therefore we are just dealing with whole tag reads in the ChIP-seq data set but not the common predefined peaks. So each of the samples in our method is a cell type. So the general strategy for evaluating our proposed method by using MAnorm method is as follows:
+% First, we computed the normalized $(M-A)$ values for all the tag reads between the two cell types. Then, we categorized the tag reads into four groups based on their $M$ values. After that, we identified the corresponding genes to each group of the read tags. These genes are defined as the genes that have the given tag reads in their promoter region which in our experiment are defined the region from 8 kb upstream to 2 kb downstream of the transcription start site (TSS)~\cite{shao2012manorm}.
+
+
+\begin{figure}[th!]
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{./figures/differentialexpression.pdf}
+		\caption{}
+		\label{fig:binpearson}
+		\hfill
+	\end{subfigure}
+	 %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.75\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/bandwidthpearson.png}
+		\includegraphics[width=\textwidth,]{./figures/meandifferentialexpression.pdf}
+		\caption{}
+		\label{fig:bandpearson}
+	\end{subfigure}
+	
+	\caption{Differential expression evaluation. (a) Vertical axis indicates the differential expression score for a given pair of cell types, defined as the correlation between the difference in H3K4me3 value with difference in gene expression (Methods). (b) Same as (a), but averaged over all cell type pairs.}
+	\label{fig:meanvarrelation}
+\end{figure}
+
+\subsection{SDPM have linear relationships with other measurements}
+
+\begin{figure}[p]
+\vspace{-0.5in}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/meanvargeneexpression.pdf}
+		\includegraphics[width=\textwidth]{./figures/foldsignal.png}
+		\caption{}
+		\label{fig:expressionscatter_a}
+		\hfill
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.45\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/bandwidthpearson.png}
+		\includegraphics[width=\textwidth]{./figures/varsignal.png}
+		\caption{}
+		\label{fig:expressionscatter_b}
+		\hfill
+	\end{subfigure}\\
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+% 	\caption{Comparison of ChIP-seq signal in the transcription start site (TSS) in variance-stabilized method and fold enrichment approach. a)Variance stabilized H3K4me3 HUVEC signal at transcription start site b)Fold enrichment H3K4me3 HUVEC signal at transcription start site}
+% 	\label{fig:expressionscatter}
+% \end{figure}
+%==========================
+% \begin{figure}[H]
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=\textwidth]{./figures/newgeneexpression.pdf}
+		\caption{}
+		\label{fig:binpearson}
+		\hfill
+	\end{subfigure}\\
+	 %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+	%(or a blank line to force the subfigure onto a new line)
+	\begin{subfigure}[b]{0.6\textwidth}
+		%\includegraphics[width=\textwidth]{./figures/bandwidthpearson.png}
+		\includegraphics[width=\textwidth,]{meangeneexpression.pdf}
+		\caption{}
+		\label{fig:bandpearson}
+	\end{subfigure}
+	\caption{
+	(a,b) Relationship between H3K4me3 signal and gene expression for (a) fold enrichment units (b) SDPM units.
+	(c) Linearity evaluation. Vertical axis indicates the linearity score, defined as the correlation between gene expression and H3K4me3 signal (Methods). (d) Same as (c), but averaged over cell types.
+% 	Comparison of the SDPM linearity score with six other signal transformation methods; Fold enrichment, log(Fold enrichment+1), asinh(Fold enrichment), P-value, log(P-value+1) and asinh(P-value).a)Linearity score. b)Average linearity score
+}
+	\label{fig:linearity}
+\end{figure}
+
+We found that when genomic signals are  represented in SDPM, they have linear relationships with other data sets (Figure~\ref{fig:linearity}). 
+To evaluate this property, we calculated the Pearson correlation between the H3K4me3 SDPM signal at a gene's promoter and that gene's expression. 
+Pearson correlation measures linear relationships, so the strength of Pearson correlation indicates the linearity of the relationship. 
+We found that SDPM had a high Pearson correlation with gene expression---an average of 0.41  across the four cell types we tested.
+In contrast, other units for H3K4me3 signal had a less strong Pearson correlation (0.37-0.40, indicating a nonlinear relationship. 
+
+% Transcription factors control the regulation and expression of the genes that they bind to. In order to evaluate whether there is a correlation between the signals that is represented for each binding position and the amount of the gene expression, we need to introduce a metric that shows this correlation.
+
+% In this paper, we used the Pearson correlation coefficient for capturing the correlation of the signals and gene expression values. High correlation coefficient represents that the proposed signals for each binding site is reliable. In other words, the higher correlation between the signals and corresponding genes' expression represents that we have small signals for genes with low gene expression and as the expression increases, the signals have higher values too.
+% As it was mentioned before, we used different parameters for getting the weighted mean-variance relation which each combination of these parameters have different results. Therefore, for fixing these parameters across all experiment among different data sets, we examined our model on H3K4me3 K562 data set by using different combination parameters of bin size, bandwidth and width values and for any $\alpha$, we have set the width value to $width = log(1/0.01)/log(\alpha)$.
+% The results of this comparison is shown in Figure ~\ref{fig:parameters}.
+% As you can see in the comparison results, it seems that using the larger bin size may lead to better correlation. On the other hand, the bandwidth parameter also has a threshold that in this amount the correlation result has the best value. In Figure ~\ref{fig:bandpear}, the best correlation value is for the bin size of 1e+05 and bandwidth of 1e+05 too which for these parameters, $\alpha$ is equal to $2^{(1/1e+05)}$ and width value is equal to $log(1/0.01)/log(\alpha)$.
+% Therefore, we have set these parameters to the mentioned values for the rest of our datasets.
+
+
+
+% We have compared our proposed signal assignment method with four other approaches which assigns different scores to the tag reads in the ChIP-seq data; Fold enrichment analysis, log(fold-enrichment analysis), P-value and log(P-value).
+% As it is shown in the Figure ~\ref{fig:pearson}, except for two values in the H3K4me3 IMR90 dataset which belongs to its P-value and log(fold-enrichment), our approach has better results than the others in having strong correlation with the gene expression values point of view.
+
+%==========================
+
+
+
+%=========================
+
+
+% \subsection{SDPM can be applied on data with only a single replicate}
+
+% In the experiments above, we considered the case where there are multiple replicates available for a given sample, allowing us to learn a mean-variance relationship for that sample.
+% SDPM can also be applied in the case where there is only a single replicate of a given experiment by learning the mean-variance relationship on data from the same assay from different cell types; we term this mode SDPM-diff.
+% We found that we achieve good results with SDPM-diff
+
+
+%===============================
+\section{Discussion}
+
+In this manuscript we propose SDPM, units for sequencing-based genomic signals that have the desirable property of variance stability. 
+This property is valuable for two reasons. 
+First, SDPM signals to be used in downstream methods without the need for each method to implement a  mean-variance relationship model.
+Second, SDPM signals can be easily analyzed by eye because the viewer does not need to take the mean-variance relationship into account when visually inspecting the data. 
+% We showed tthat SDKM signals are preferable to existing units for genomic signals 
+
+
+
+% In this paper, we tried to introduce a new approach for assigning new statistically significant signals for each of the sequence reads in ChIP-seq data. So that  predicting precise locations for transcription factor binding sites are more reliable by using our proposed method..
+% The idea behind our method is that we would like to propose a new scoring method so that all data sets have natural units and therefore interpreting these data might be much more easier even by eye.
+% Therefore, we proposed a new method called variance stabilization method which captures the mean-variance relation between two replicates of a sample. Therefore, given a mean-variance relation between two samples, we can calculate the new variance stabilized score for each of the sequence reads in ChIP-seq data.
+% As the results showed, our method is superior to other well-known methods and have a high correlation with gene expression data which shows that the proposed new signals are more statistically significant.
+
+
+%\bibliographystyle{myrecomb}
+\bibliographystyle{plain}
+
+\bibliography{MyReferences}
+
+% \clearpage
+% \section{Supplementary
+% information}
+
+% \subsection{Review of ChIP-seq analysis methods}
+
+% One of the most important functional elements in any
+% genome is transcription factor binding sites, the sites within
+% the DNA to which they bind. These interactions between
+% protein and DNA control many important processes, such as
+% critical steps in development and responses to environmental
+% stresses, and defects in them can contribute to the progression
+% of various diseases\cite{baxevanis2004bioinformatics}. Therefore, identifying these sites is one of the enormous challenges.
+% Many computational approaches have been proposed for addressing this issue which in the following, some of the most important ones are introduced briefly.
+
+% Generally, the study of identifying transcription factors and histone modifications binding sites fall into one of the two categories; Identifying the peaks or Identifying the differential transcription factors between different cell types.  
+% Kharchenko et al. developed a ChIP-seq processing pipeline (spp) which was designed to detect protein-binding positions with high accuracy by introducing methods to improve tag alignment\cite{kim2011short}.
+% Spp implemented three peak-calling methods: (1) the
+% window tag density (WTD) is a method that extends positive- and
+% negative-strand tags by the expected DNA fragment
+% length in order to determine binding positions to
+% those tags with the highest number of overlapping
+% fragments, and scores positions based on the strandspecific
+% tags; (2) the matching strand peaks (MSP)
+% approach (which determines local peaks of strandspecific
+% tag density and identifies positions surrounded
+% by positive- and negative-strand peaks); (3)
+% the mirror tag correlation (MTC) method (which
+% scans the genome to identify positions exhibiting
+% pronounced positive- and negative-strand tag patterns
+% that mirror each other). All methods employ background
+% subtraction of the control tag density to
+% correct for the uneven background distribution. The
+% p-value is calculated assuming Poisson density, and
+% candidate binding sites were selected with p-values $< 10^{-5}$.
+% Given the scores calculated by one of the
+% above methods, the corresponding false discovery rate
+% (FDR) can be estimated as the number of binding
+% positions with the score s or higher found in the
+% ChIP dataset, divided by that in the control set\cite{kharchenko2008design}. Jiang et al. developed a tool, CisGenome, for ChIP data analysis. This approach uses a conditional binomial model for two-sample analysis\cite{ji2008integrated}.
+% Another approach which is one of the most well-known approaches in identifying transcription factor binding sites is Model-based Analysis of ChIP-Seq (MACS)\cite{zhang2008model}.
+% The idea behind MACS approach is to move all peak by $d/2$ toward the 3' end in which $d$ is the distance between two peaks of the positive and negative strands.
+% In addition to the mentioned approaches which are related to identifying the peaks, In the following, some of the approaches that studied the differential analysis in transcription factor binding sites are introduced.
+% Han Xu et al. introduced a new method named ChIPDiff which is a hidden Markov model-based method to detect broad chromatin domains associated with distinct levels of histone modifications between two cell types~\cite{xu2008hmm}.
+% Taslim C et al. introduced a nonlinear method that uses locally weighted regression (LOWESS) for ChIP-Seq data normalization. The underlying assumption of this method is that the genome-wide distribution of read densities has equal mean value and variance across samples~\cite{taslim2009comparativea}.
+% Yanxiao Zhang et al. introduced a mthod called PePr that uses a sliding window approach and models read counts across replicates and between groups with a local negative binomial model~\cite{zhang2014pepr}.
+% Shaun Mahony et al. introduced an integrated machine learning approach for the analysis of multiple related ChIP-seq experiments. Their framework enables the simultaneous modeling of sparse condition-specific binding changes, sequence dependence, and replicate-specific noise sources~\cite{mahony2014integrated}.
+% Matthias Heinig et al. used a probabilistic classifications of genomic regions as being either modified in both samples, unmodified in both samples or differentially modified between samples~\cite{heinig2015histonehmm}.
+% Manuel Allhoff et al. introduced a HMM based approach to detect differential peaks between pairs of biological conditions with replicates. They proposed a novel normalization approach based on housekeeping genes to deal with cases where replicates have distinct signal-to-noise ratios~\cite{allhoff2016differentiall}.
+% Aaron T.L. Lun et al. introduced a new approach called csaw that uses a window-based strategy to summarize read counts across the genome. It exploits existing statistical software to test for significant differences in each window. Finally, it clusters windows into regions for output and controls the false discovery rate properly over all detected regions~\cite{lun2015csaw}
+% In the following section, our proposed method for assigning new signals to transcription factors and histone modifications is described. Then the experiments and comparison of our method to the other well-known methods is described in the next sections.
+
+% ChIP-seq analysis methods for identifying transcription factor binding sites can generally fall into two categories: One-sample and two-sample experiments\cite{kim2011short}.
+% Only one ChIP sample is sequenced in the one-sample analysis but despite the one-sample analysis, a control sample is sequenced in two-sample studies in addition to the ChIP sample and this is due to the some biases from random protein-DNA or antibody-DNA interactions, etc.
+% Therefore, because of these biases, two-sample analysis is needed for more reliable results.
+
+\end{document}
+
+
