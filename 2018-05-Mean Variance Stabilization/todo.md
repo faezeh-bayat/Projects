@@ -2,7 +2,7 @@
 Todo:
 - [2] Get fold-enrichment data from raw bam file using MACS. 
 - Experiments:
-    + [2] Try learning mean-var relationship on a bunch of different assays: H3K36me3, H3K27ac, H3K4me1, H3K27me3, H3K9me3, DNase-seq, ATAC-seq, FAIRE-seq. Try whatever cell types have data available. Focus further analysis on the assays where existing transformations (log, asinh) perform worst.
+    + [2] Try learning mean-var relationship on a bunch of different assays: H3K36me3, H3K27ac, H3K4me1, H3K27me3, H3K9me3, DNase-seq, ATAC-seq, FAIRE-seq, PolII, CTCF, P300. Try whatever cell types have data available. Focus further analysis on the assays where existing transformations (log, asinh) perform worst.
 - Model improvements:
     + [4] Add improvement that involves combining all zero-value bins.
     + [6] Speedup from the binning improvement #3 described in theory.tex. (Or #4, which is easier)
