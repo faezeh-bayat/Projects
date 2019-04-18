@@ -1,0 +1,961 @@
+﻿Dataset,Evaluation type,Method,Alpha,Beta,Width,Bin size,Curve,Evaluation Value,Chromosome
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.068076623,chr1
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.888179572,chr1
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.856723415,chr1
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.003778362,chr1
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.742818358,chr2
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.739842674,chr2
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.758878269,chr2
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.489316974,chr2
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.542729226,chr3
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.700504261,chr3
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.734702353,chr3
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.109367087,chr3
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.704060411,chr4
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.650135449,chr4
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.706723586,chr4
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.420309188,chr4
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.572041679,chr5
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.626185875,chr5
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.690678237,chr5
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.272713743,chr5
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.240771258,chr6
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.704401587,chr6
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.742492738,chr6
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.45641641,chr6
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.066451317,chr7
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.680448685,chr7
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.722308758,chr7
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.60052545,chr7
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.980008228,chr8
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.710298977,chr8
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.741099802,chr8
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.408388263,chr8
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.64149621,chr9
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.449296056,chr9
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.583714499,chr9
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.825434565,chr9
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.583894458,chr10
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.728113879,chr10
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.752085991,chr10
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.401889357,chr10
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.526806739,chr11
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.785686516,chr11
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.793059014,chr11
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.702145763,chr11
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.806158443,chr12
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.676729194,chr12
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.724718976,chr12
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.748141059,chr12
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.828040661,chr13
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.481009585,chr13
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.602643838,chr13
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.934021501,chr13
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.40989709,chr14
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.575399897,chr14
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.660343501,chr14
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.141250999,chr14
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.138396341,chr15
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.618003685,chr15
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.688301865,chr15
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.329470025,chr15
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.9151969,chr16
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.795596104,chr16
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.794916272,chr16
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.67045088,chr16
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.824322253,chr17
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.934152306,chr17
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.88980836,chr17
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.878005484,chr17
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.365083393,chr18
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.670826302,chr18
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.718754638,chr18
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.199782307,chr18
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.537569557,chr19
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.982141868,chr19
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.909403416,chr19
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.413420488,chr19
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.798828401,chr20
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.863919932,chr20
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.844797311,chr20
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.994851503,chr20
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.706586843,chr21
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.497889269,chr21
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.617652343,chr21
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.095173933,chr21
+H3K27me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.514442258,chr22
+H3K27me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.68248869,chr22
+H3K27me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.73724534,chr22
+H3K27me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.738274306,chr22
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.866038878,chr1
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.83178178,chr1
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.832579813,chr1
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.19502217,chr1
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.513855985,chr2
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.692179506,chr2
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.74691215,chr2
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.909110311,chr2
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.36570621,chr3
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.711853403,chr3
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.760208956,chr3
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.94895068,chr3
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.603012051,chr4
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.629949966,chr4
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.710258547,chr4
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.802202145,chr4
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.363308609,chr5
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.615075746,chr5
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.70131362,chr5
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.775129595,chr5
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.198957764,chr6
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.666975364,chr6
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.733263463,chr6
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.886115927,chr6
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.078292413,chr7
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.63344909,chr7
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.70901571,chr7
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.812604168,chr7
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.041839414,chr8
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.642903829,chr8
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.716973389,chr8
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.818079631,chr8
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.495471337,chr9
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.433455225,chr9
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.586634294,chr9
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.566904277,chr9
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.62766398,chr10
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.654512986,chr10
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.722684884,chr10
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.848028371,chr10
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.559667194,chr11
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.730554385,chr11
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.768152665,chr11
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.014228086,chr11
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.633890211,chr12
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.668740367,chr12
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.735548155,chr12
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.897908753,chr12
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.841989732,chr13
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.467956415,chr13
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.610510757,chr13
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.569234378,chr13
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.316760285,chr14
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.55624655,chr14
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.663469166,chr14
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.740957658,chr14
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.983384721,chr15
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.576555271,chr15
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.674988714,chr15
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.803435517,chr15
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.797695087,chr16
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.741754754,chr16
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.774965756,chr16
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.134575073,chr16
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.660026563,chr17
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.876062907,chr17
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.861572367,chr17
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.373035377,chr17
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.343458075,chr18
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.633854012,chr18
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.710341639,chr18
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.795851062,chr18
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.437760033,chr19
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.932288585,chr19
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.896954179,chr19
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.676880757,chr19
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.759338325,chr20
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.771218298,chr20
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.794458374,chr20
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.110530586,chr20
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.70328243,chr21
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.485585096,chr21
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.618774915,chr21
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.683192632,chr21
+H3K36me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.440871394,chr22
+H3K36me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.575284684,chr22
+H3K36me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.677486594,chr22
+H3K36me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.983179871,chr22
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.979390504,chr1
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.740652247,chr1
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.787742373,chr1
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.415380138,chr1
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.248312673,chr2
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.579039854,chr2
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.681295718,chr2
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.998707549,chr2
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.14205738,chr3
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.588591513,chr3
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.6866304,chr3
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.989667327,chr3
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.28553198,chr4
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.49541477,chr4
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.627997106,chr4
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.819314354,chr4
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.150422125,chr5
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.48170686,chr5
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.618830743,chr5
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.777723474,chr5
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.016509384,chr6
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.576852824,chr6
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.680064515,chr6
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.991058235,chr6
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.936219076,chr7
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.529447078,chr7
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.649935642,chr7
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.907552915,chr7
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.916755449,chr8
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.542041977,chr8
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.656682558,chr8
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.895640395,chr8
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.744999507,chr9
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.351583564,chr9
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.536982996,chr9
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.582502133,chr9
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.753722505,chr10
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.571765265,chr10
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.675764396,chr10
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.977170946,chr10
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.758357243,chr11
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.614788087,chr11
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.706824849,chr11
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.168874894,chr11
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.861088975,chr12
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.548161608,chr12
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.660525738,chr12
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.913464623,chr12
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.840802008,chr13
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.372755246,chr13
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.549532802,chr13
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.583809614,chr13
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.703828251,chr14
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.445849214,chr14
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.596926313,chr14
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.765015065,chr14
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.565785778,chr15
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.499005312,chr15
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.631303948,chr15
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.913961871,chr15
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.487536958,chr16
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.65253254,chr16
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.731478165,chr16
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.304840148,chr16
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.447285121,chr17
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.807158768,chr17
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.830871426,chr17
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.643393923,chr17
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.658409968,chr18
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.559965184,chr18
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.667972274,chr18
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.896211282,chr18
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.40097429,chr19
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.793770551,chr19
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.821221687,chr19
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.660653684,chr19
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.466477295,chr20
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.726345423,chr20
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.77577581,chr20
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.300673292,chr20
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.442169254,chr21
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.444091765,chr21
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.594740265,chr21
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.727375914,chr21
+H3K4me1 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.405203754,chr22
+H3K4me1 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.584850017,chr22
+H3K4me1 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.690932451,chr22
+H3K4me1 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.187436573,chr22
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.559852313,chr1
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.338617222,chr1
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.547520239,chr1
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.277340485,chr1
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.570062286,chr2
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.318066714,chr2
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.53120509,chr2
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.23139815,chr2
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.54406026,chr3
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.324325148,chr3
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.533368517,chr3
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.197368398,chr3
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.532600469,chr4
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.311105698,chr4
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.523850683,chr4
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.177001485,chr4
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.533648648,chr5
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.311693245,chr5
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.524311101,chr5
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.176022237,chr5
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.529669397,chr6
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.344814684,chr6
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.551678855,chr6
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.261108247,chr6
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.521042869,chr7
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.295748358,chr7
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.514546449,chr7
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.175363824,chr7
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.524570167,chr8
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.316048893,chr8
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.527932865,chr8
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.183194512,chr8
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.512505882,chr9
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.196678575,chr9
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.448897719,chr9
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.108066807,chr9
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.519892692,chr10
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.308886626,chr10
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.524617556,chr10
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.195236744,chr10
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.519859456,chr11
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.318052837,chr11
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.532378341,chr11
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.252357018,chr11
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.519095705,chr12
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.341303078,chr12
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.548374707,chr12
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.258423848,chr12
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.512561144,chr13
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.25563713,chr13
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.487332846,chr13
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.136769522,chr13
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.509590788,chr14
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.27227655,chr14
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.50198132,chr14
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.202623415,chr14
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.508466848,chr15
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.249282445,chr15
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.487745963,chr15
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.187835868,chr15
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.511334661,chr16
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.278138461,chr16
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.507833611,chr16
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.251452712,chr16
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.506029715,chr17
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.340711933,chr17
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.554551372,chr17
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.34702558,chr17
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.510788314,chr18
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.307110741,chr18
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.522729431,chr18
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.174748462,chr18
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.509714142,chr19
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.33584553,chr19
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.555594573,chr19
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.422432325,chr19
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.510864271,chr20
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.313870958,chr20
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.5308616,chr20
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.224159625,chr20
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.528432958,chr21
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.227020925,chr21
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.472619545,chr21
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.13702002,chr21
+H3K4me3 GM12878,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.52597815,chr22
+H3K4me3 GM12878,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.185518651,chr22
+H3K4me3 GM12878,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.448411602,chr22
+H3K4me3 GM12878,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.182446119,chr22
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.608710756,chr1
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.616034853,chr1
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.701270514,chr1
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.989625428,chr1
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.3778102,chr2
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.523124351,chr2
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.635485459,chr2
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.806390013,chr2
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.152558049,chr3
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.5218341,chr3
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.632935744,chr3
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.555108669,chr3
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.622469076,chr4
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.479421499,chr4
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.603657523,chr4
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.877718626,chr4
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-3.141879656,chr5
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.470487555,chr5
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.59852008,chr5
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.909376176,chr5
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.775535424,chr6
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.530733357,chr6
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.644869364,chr6
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.791947001,chr6
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.691884223,chr7
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.489513894,chr7
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.612769318,chr7
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.085392952,chr7
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.801253713,chr8
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.511715964,chr8
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.62501099,chr8
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.173550569,chr8
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.342901041,chr9
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.318964659,chr9
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.508836625,chr9
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.529809058,chr9
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.355016733,chr10
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.514452753,chr10
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.628157469,chr10
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.170890432,chr10
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.293746204,chr11
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.548246656,chr11
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.656140338,chr11
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.612052898,chr11
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.364543278,chr12
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.510658263,chr12
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.62923363,chr12
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.272032163,chr12
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.651458278,chr13
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.363138246,chr13
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.533056157,chr13
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.387556036,chr13
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.142119848,chr14
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.414839449,chr14
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.570726626,chr14
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.734473125,chr14
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.882745718,chr15
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.427131254,chr15
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.580646734,chr15
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.582099021,chr15
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.687380646,chr16
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.554558268,chr16
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.664973121,chr16
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.961588639,chr16
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.537271962,chr17
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.667464652,chr17
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.745323954,chr17
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-6.894444773,chr17
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.166231177,chr18
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.505392395,chr18
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.624944283,chr18
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.92341944,chr18
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.358331626,chr19
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.759427699,chr19
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.813475078,chr19
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-9.695718483,chr19
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.6727696,chr20
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.607656229,chr20
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.698767582,chr20
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.417729979,chr20
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.636766283,chr21
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.385321344,chr21
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.557679466,chr21
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.55460027,chr21
+H3K4me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.391677655,chr22
+H3K4me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.443872601,chr22
+H3K4me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.599546345,chr22
+H3K4me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.022836991,chr22
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.543430744,chr1
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.496308678,chr1
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.652024765,chr1
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-6.080180895,chr1
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.593960487,chr2
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.506313995,chr2
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.647516212,chr2
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.172346436,chr2
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.5517726,chr3
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.528731951,chr3
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.658983939,chr3
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.920699313,chr3
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.535228292,chr4
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.539483925,chr4
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.662964407,chr4
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.014871823,chr4
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.542643013,chr5
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.557061003,chr5
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.67536601,chr5
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-5.170874192,chr5
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.510113182,chr6
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.541751345,chr6
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.672152853,chr6
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-5.161654663,chr6
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.517859229,chr7
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.48814668,chr7
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.633708404,chr7
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.801156054,chr7
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.505138693,chr8
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.528281294,chr8
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.659031168,chr8
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.856156115,chr8
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.48538996,chr9
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.344888581,chr9
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.540719333,chr9
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.244615691,chr9
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.515452658,chr10
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.490899371,chr10
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.639175582,chr10
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.467473054,chr10
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.480426995,chr11
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.492116259,chr11
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.641251266,chr11
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.383357718,chr11
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.462862909,chr12
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.558942135,chr12
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.682793105,chr12
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-5.471464486,chr12
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.469362855,chr13
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.480329842,chr13
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.622567165,chr13
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.915146085,chr13
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.464462262,chr14
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.443505657,chr14
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.606340998,chr14
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.287713828,chr14
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.481827249,chr15
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.370514452,chr15
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.564638247,chr15
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.204826413,chr15
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.453919774,chr16
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.404686784,chr16
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.586158238,chr16
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.127002615,chr16
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.428753729,chr17
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.488409089,chr17
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.64146033,chr17
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.920876094,chr17
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.472325608,chr18
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.512825029,chr18
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.643380276,chr18
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.685001355,chr18
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.407729943,chr19
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.484382778,chr19
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.631415542,chr19
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.805599099,chr19
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.469291737,chr20
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.458998396,chr20
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.610014867,chr20
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.118558478,chr20
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.461617134,chr21
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.399436457,chr21
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.563435066,chr21
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.833048724,chr21
+H3K4me3 HUVEC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.441120928,chr22
+H3K4me3 HUVEC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.285509056,chr22
+H3K4me3 HUVEC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.498907727,chr22
+H3K4me3 HUVEC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.150503706,chr22
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.393943997,chr1
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.566423245,chr1
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.673489665,chr1
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.896551767,chr1
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.41872239,chr2
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.525146288,chr2
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.644101026,chr2
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.785387203,chr2
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.380301576,chr3
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.489425761,chr3
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.622482081,chr3
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.730095944,chr3
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.435140838,chr4
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.504739406,chr4
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.631239887,chr4
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.724239962,chr4
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.445716071,chr5
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.49491386,chr5
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.626811191,chr5
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.680086747,chr5
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.370781681,chr6
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.525371969,chr6
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.652518588,chr6
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.801578402,chr6
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.470557181,chr7
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.501092838,chr7
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.628912009,chr7
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.727925843,chr7
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.367661906,chr8
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.516162982,chr8
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.635990788,chr8
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.730620585,chr8
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.323600788,chr9
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.237939017,chr9
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.463225175,chr9
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.415063928,chr9
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.34050522,chr10
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.505734522,chr10
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.631880579,chr10
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.718307676,chr10
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.312632859,chr11
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.546213861,chr11
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.660161915,chr11
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.912130473,chr11
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.331179661,chr12
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.532938053,chr12
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.652937277,chr12
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.894568613,chr12
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.327323286,chr13
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.345160928,chr13
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.529584122,chr13
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.518194692,chr13
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.309917876,chr14
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.385524372,chr14
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.555806129,chr14
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.700769804,chr14
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.318473717,chr15
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.405178052,chr15
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.569474984,chr15
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.662251786,chr15
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.296033952,chr16
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.495655553,chr16
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.626506285,chr16
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.952394538,chr16
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.274669982,chr17
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.569237614,chr17
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.67596101,chr17
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.177149161,chr17
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.360678391,chr18
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.455376888,chr18
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.599139211,chr18
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.636836304,chr18
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.299499594,chr19
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.618608732,chr19
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.718918055,chr19
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.672354164,chr19
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.304580386,chr20
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.487733839,chr20
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.619315213,chr20
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.865452067,chr20
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.312739571,chr21
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.357485802,chr21
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.54211332,chr21
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.523608695,chr21
+H3K4me3 K562,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.386116536,chr22
+H3K4me3 K562,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.31413914,chr22
+H3K4me3 K562,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.516979094,chr22
+H3K4me3 K562,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-1.699967784,chr22
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.145478892,chr1
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.842621598,chr1
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.811950368,chr1
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.502283263,chr1
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.968273734,chr2
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.939604094,chr2
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.856562169,chr2
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.312851114,chr2
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.033809803,chr3
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.944836946,chr3
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.851741028,chr3
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.765410574,chr3
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.941192249,chr4
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-2.008525252,chr4
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.894253663,chr4
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.236063741,chr4
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.931201558,chr5
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.992907536,chr5
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.881227611,chr5
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.912499286,chr5
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.947619651,chr6
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.925418508,chr6
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.843478394,chr6
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.818723685,chr6
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.927070955,chr7
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.961152278,chr7
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.883725341,chr7
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-4.140766175,chr7
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.897713795,chr8
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-2.008656917,chr8
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.901331261,chr8
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.661046325,chr8
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.983943518,chr9
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.653244988,chr9
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.688816228,chr9
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.435866574,chr9
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.9853334,chr10
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.9243365,chr10
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.854140253,chr10
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.386989943,chr10
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.083704914,chr11
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.973344392,chr11
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.88404231,chr11
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.264551435,chr11
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.973821314,chr12
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.959949555,chr12
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.868005847,chr12
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.511065331,chr12
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.902756834,chr13
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.781732664,chr13
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.758530689,chr13
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.765929653,chr13
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.941553842,chr14
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.773496879,chr14
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.757382611,chr14
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.549440373,chr14
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.941620534,chr15
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.70562261,chr15
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.726460438,chr15
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.800841703,chr15
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.990618631,chr16
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.74883144,chr16
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.76544989,chr16
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.377384815,chr16
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.176500398,chr17
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.699366416,chr17
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.73533097,chr17
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.7987467,chr17
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.897220392,chr18
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-2.078446165,chr18
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.940422,chr18
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.724898296,chr18
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.955579041,chr19
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-2.438421189,chr19
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-2.211200891,chr19
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-7.079640167,chr19
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.001975069,chr20
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.859667232,chr20
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.828738193,chr20
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.112918824,chr20
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-1.919786653,chr21
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.954022658,chr21
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.875183502,chr21
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-3.852256023,chr21
+H3K9me3 H1-hESC,Log likelihood,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-2.07650406,chr22
+H3K9me3 H1-hESC,Log likelihood,No transformation,NA,NA,NA,NA,NA,-1.504013584,chr22
+H3K9me3 H1-hESC,Log likelihood,asinh(x),NA,NA,NA,NA,NA,-1.619222977,chr22
+H3K9me3 H1-hESC,Log likelihood,log(x+1),NA,NA,NA,NA,NA,-2.572283622,chr22
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.18545902,chr22
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.156511546,chr22
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.186931279,chr22
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.185955508,chr22
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.024069649,chr21
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.073219689,chr21
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.027369073,chr21
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.032863571,chr21
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.229064284,chr20
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.166901108,chr20
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.230607273,chr20
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.227575561,chr20
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.160486035,chr19
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.112428754,chr19
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.159737711,chr19
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.158174354,chr19
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.181664479,chr18
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.181302245,chr18
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.18379877,chr18
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.184551928,chr18
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.196781735,chr17
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.178859132,chr17
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.198776593,chr17
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.199297308,chr17
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.13571871,chr16
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.112398152,chr16
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.136432183,chr16
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.135468324,chr16
+H3K27me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.169839433,chr15
+H3K27me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.194300524,chr15
+H3K27me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.18204918,chr15
+H3K27me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.185136194,chr15
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.465959137,chr22
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.460058735,chr22
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.466940905,chr22
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.467358434,chr22
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.572021014,chr21
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.565416118,chr21
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.575040796,chr21
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.574873168,chr21
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.449205501,chr20
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.443187514,chr20
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.449665862,chr20
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.449816599,chr20
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.422408014,chr19
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.395733794,chr19
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.423193365,chr19
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.42178268,chr19
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.455172496,chr18
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.429528978,chr18
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.455221937,chr18
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.455837747,chr18
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.483217605,chr17
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.459229621,chr17
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.483453025,chr17
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.482682711,chr17
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.391903987,chr16
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.388317917,chr16
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.393795872,chr16
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.39389537,chr16
+H3K36me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.427263395,chr15
+H3K36me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.40911436,chr15
+H3K36me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.425538738,chr15
+H3K36me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.425419585,chr15
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.11097014,chr22
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.094417308,chr22
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.105475501,chr22
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.105860096,chr22
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.121775777,chr21
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.075464232,chr21
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.108517074,chr21
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.107785205,chr21
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.106705968,chr20
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.09488558,chr20
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.106310027,chr20
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.105924509,chr20
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.316647908,chr19
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.294760992,chr19
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.316985219,chr19
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.316247519,chr19
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.093198546,chr18
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.051170754,chr18
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.089319629,chr18
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.088595094,chr18
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.145850543,chr17
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.11576159,chr17
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.146986176,chr17
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.145811383,chr17
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.130869035,chr16
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.130768282,chr16
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.129586849,chr16
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.130255166,chr16
+H3K4me1 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.148588872,chr15
+H3K4me1 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.111662925,chr15
+H3K4me1 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.138325813,chr15
+H3K4me1 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.138393789,chr15
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.423999099,chr22
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.463348316,chr22
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.440782231,chr22
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.44311855,chr22
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.4085457,chr21
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.42993551,chr21
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.418486734,chr21
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.421498658,chr21
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.524863544,chr20
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.549523486,chr20
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.537006248,chr20
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.540269861,chr20
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.485412703,chr19
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.501420113,chr19
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.496715139,chr19
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.497863336,chr19
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.456822696,chr18
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.464145836,chr18
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.455982895,chr18
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.459463855,chr18
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.419345259,chr17
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.46513123,chr17
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.435171012,chr17
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.438171252,chr17
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.416467483,chr16
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.432671026,chr16
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.427083844,chr16
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.428381901,chr16
+H3K4me3 GM12878,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.375913314,chr15
+H3K4me3 GM12878,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.397741478,chr15
+H3K4me3 GM12878,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.383406161,chr15
+H3K4me3 GM12878,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.386393798,chr15
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.327113589,chr22
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.402107916,chr22
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.348823129,chr22
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.354046807,chr22
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.29755527,chr21
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.385984337,chr21
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.340451987,chr21
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.345005864,chr21
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.317471105,chr20
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.430155115,chr20
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.335287668,chr20
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.34373787,chr20
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.404546725,chr19
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.453460047,chr19
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.408065141,chr19
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.412513286,chr19
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.241541467,chr18
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.304173966,chr18
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.243232412,chr18
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.247771379,chr18
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.366805398,chr17
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.43214955,chr17
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.369142228,chr17
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.374686551,chr17
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.271940559,chr16
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.342121205,chr16
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.285146368,chr16
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.29010999,chr16
+H3K4me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.261710888,chr15
+H3K4me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.310209554,chr15
+H3K4me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.268405804,chr15
+H3K4me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.272747495,chr15
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.419762991,chr22
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.362172738,chr22
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.416926927,chr22
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.417760119,chr22
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.364356346,chr21
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.328212005,chr21
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.355506494,chr21
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.357945224,chr21
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.481708331,chr20
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.401780184,chr20
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.477092902,chr20
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.476076879,chr20
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.428795268,chr19
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.411555405,chr19
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.428944395,chr19
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.431026859,chr19
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.466091886,chr18
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.445075535,chr18
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.447990435,chr18
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.450719462,chr18
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.436647501,chr17
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.373432116,chr17
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.435706083,chr17
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.436150944,chr17
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.399397661,chr16
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.359178446,chr16
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.399107366,chr16
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.39949212,chr16
+H3K4me3 HUVEC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.383299128,chr15
+H3K4me3 HUVEC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.322001639,chr15
+H3K4me3 HUVEC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.376959004,chr15
+H3K4me3 HUVEC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.376631982,chr15
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.455842406,chr22
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.454521321,chr22
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.450845554,chr22
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.45445126,chr22
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.447600258,chr21
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.415660998,chr21
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.424731398,chr21
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.427727748,chr21
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.503579027,chr20
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.524669098,chr20
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.503369726,chr20
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.507171206,chr20
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.461878037,chr19
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.473852226,chr19
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.458307825,chr19
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.460735066,chr19
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.523425995,chr18
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.517039478,chr18
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.515159059,chr18
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.518656114,chr18
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.47270998,chr17
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.485317994,chr17
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.469359522,chr17
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.472276751,chr17
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.34894398,chr16
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.381999334,chr16
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.353857748,chr16
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.357235734,chr16
+H3K4me3 K562,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,0.404908957,chr15
+H3K4me3 K562,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,0.429422744,chr15
+H3K4me3 K562,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,0.406443815,chr15
+H3K4me3 K562,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,0.409843853,chr15
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.201392777,chr22
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.190331539,chr22
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.20320404,chr22
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.202812946,chr22
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.268192574,chr21
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.25891412,chr21
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.276796591,chr21
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.275073648,chr21
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.268330032,chr20
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.213672204,chr20
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.267469746,chr20
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.26538237,chr20
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.308539248,chr19
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.257227062,chr19
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.318727927,chr19
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.315089009,chr19
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.097518917,chr18
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.087545282,chr18
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.097172141,chr18
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.096972666,chr18
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.187044312,chr17
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.150665387,chr17
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.190256703,chr17
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.187540681,chr17
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.153176748,chr16
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.133067851,chr16
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.156434048,chr16
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.154967947,chr16
+H3K9me3 H1-hESC,Gene expression analysis,SDPM,1.000000693,1.00E+06,6643857,1.00E+05,step,-0.085327311,chr15
+H3K9me3 H1-hESC,Gene expression analysis,Fold enrichment,NA,NA,NA,NA,NA,-0.088642836,chr15
+H3K9me3 H1-hESC,Gene expression analysis,asinh(Fold enrichment),NA,NA,NA,NA,NA,-0.089910499,chr15
+H3K9me3 H1-hESC,Gene expression analysis,log(Fold enrichment +1),NA,NA,NA,NA,NA,-0.089760476,chr15
